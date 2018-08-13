@@ -40,7 +40,6 @@
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                             <i class="fa fa-bars"></i>
                         </button>
-                        <a class="navbar-brand sticky_logo" href="index5.html"><img th:src="@{images/logo-white.png}" class="logo" alt=""></a>
                     </div> <!-- End Header Navigation -->
                     <div class="collapse navbar-collapse" id="navbar-menu">
                         <ul class="nav navbar-nav" data-in="fadeIn" data-out="fadeOut">
@@ -239,24 +238,21 @@
 <!--Advance Search-->
 <section class="property-query-area bg_light">
     <div class="container">
-        <div class="row">
+        <p><h4>Advanced search</h4></p>
+        <div class="row advanced_search_box">
             <form class="callus">
                 <div class="col-md-3 col-sm-6">
                     <div class="single-query form-group">
-                        <input type="text" class="keyword-input" placeholder="Keyword (e.g. 'office')">
+                        <input type="text" class="keyword-input" placeholder="Enter neighbourhood">
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="single-query form-group">
                         <div class="intro">
                             <select>
-                                <option selected="" value="any">Location</option>
-                                <option>All areas</option>
-                                <option>Bayonne </option>
-                                <option>Greenville</option>
-                                <option>Manhattan</option>
-                                <option>Queens</option>
-                                <option>The Heights</option>
+                                <option selected="" value="any">Listing type</option>
+                                <option>For rent</option>
+                                <option>For sale</option>
                             </select>
                         </div>
                     </div>
@@ -265,13 +261,9 @@
                     <div class="single-query form-group">
                         <div class="intro">
                             <select>
-                                <option class="active">Property Type</option>
-                                <option>All areas</option>
-                                <option>Bayonne </option>
-                                <option>Greenville</option>
-                                <option>Manhattan</option>
-                                <option>Queens</option>
-                                <option>The Heights</option>
+                                <option class="active">Price range</option>
+                                <option>100 - 500</option>
+                                <option>100 - 1000 </option>
                             </select>
                         </div>
                     </div>
@@ -280,85 +272,22 @@
                     <div class="single-query form-group">
                         <div class="intro">
                             <select>
-                                <option class="active">Property Status</option>
-                                <option>All areas</option>
-                                <option>Bayonne </option>
-                                <option>Greenville</option>
-                                <option>Manhattan</option>
-                                <option>Queens</option>
-                                <option>The Heights</option>
+                                <option class="active">Property type</option>
+                                <option>House</option>
+                                <option>Apartment</option>
+                                <option>Office</option>
+                                <option>Land</option>
+                                <option>Shop</option>
+                                <option>Warehouse</option>
+                                <option>Hotel</option>
                             </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="row search-2">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="single-query form-group">
-                                <div class="intro">
-                                    <select>
-                                        <option class="active">Min Beds</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                        <option>6</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="single-query form-group">
-                                <div class="intro">
-                                    <select>
-                                        <option class="active">Min Baths</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                        <option>6</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="single-query form-group">
-                                <input type="text" class="keyword-input" placeholder="Min Area (sq ft)">
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="single-query form-group">
-                                <input type="text" class="keyword-input" placeholder="Max Area (sq ft)">
-                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="row">
-                        <div class="col-md-8">
-                            <div class="single-query-slider">
-                                <label>Price Range:</label>
-                                <div class="price text-right">
-                                    <span>$</span>
-                                    <div class="leftLabel"></div>
-                                    <span>to $</span>
-                                    <div class="rightLabel"></div>
-                                </div>
-                                <div data-range_min="0" data-range_max="1500000" data-cur_min="0" data-cur_max="1500000" class="nstSlider">
-                                    <div class="bar"></div>
-                                    <div class="leftGrip"></div>
-                                    <div class="rightGrip"></div>
-                                </div>
-                            </div>
-                        </div>
                         <div class="col-md-4 text-right form-group">
-                            <button type="submit" class="btn-blue border_radius top15">Search</button>
+                            <button type="submit" class="btn-blue border_radius top15"><i class="fa fa-search"></i></button>
                         </div>
                     </div>
                 </div>
@@ -765,76 +694,64 @@
     </div>
 </section>
 <!--Partner Ends-->
-
-
-
 <!--Footer-->
 <footer class="padding_top footer2">
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-sm-6">
                 <div class="footer_panel bottom30">
-                    <a href="javascript:void(0)" class="logo bottom30"><img th:src="@{/images/logo-white.png}" alt="logo"></a>
-                    <p class="bottom15">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                        tempor cum consectetuer
-                        adipiscing.
-                    </p>
-                    <p class="bottom15">If you are interested in RealtyHomes do not wait and <a href="javascript:void(0)">BUY IT NOW!</a></p>
-                    <ul class="social_share">
-                        <li><a href="javascript:void(0)" class="facebook"><i class="icon-facebook-1"></i></a></li>
-                        <li><a href="javascript:void(0)" class="twitter"><i class="icon-twitter-1"></i></a></li>
-                        <li><a href="javascript:void(0)" class="google"><i class="icon-google4"></i></a></li>
-                        <li><a href="javascript:void(0)" class="linkden"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="javascript:void(0)" class="vimo"><i class="icon-vimeo3"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="footer_panel bottom30">
-                    <h4 class="bottom30">Search using some information</h4>
+                    <h4 class="bottom30">Sales</h4>
                     <ul class="area_search">
-                        <li><a href="javascript:void(0)"><i class="icon-icons74"></i>Bayonne, New Jersey</a></li>
-                        <li class="active"><a href="javascript:void(0)"><i class="icon-icons74"></i>Greenville, New Jersey</a></li>
-                        <li><a href="javascript:void(0)"> <i class="icon-icons74"></i>The Heights, New Jersey</a></li>
-                        <li><a href="javascript:void(0)"><i class="icon-icons74"></i>West Side, New York</a></li>
-                        <li><a href="javascript:void(0)"><i class="icon-icons74"></i>Upper East Side, New York</a></li>
+                        <li><a href="javascript:void(0)">Houses</a></li>
+                        <li class="active"><a href="javascript:void(0)">Apartments</a></li>
+                        <li><a href="javascript:void(0)">Land</a></li>
+                        <li><a href="javascript:void(0)">Offices</a></li>
+                        <li><a href="javascript:void(0)">Shops</a></li>
+                        <li><a href="javascript:void(0)">Warehouse</a></li>
+                        <li><a href="javascript:void(0)">Bars / Restaurants</a></li>
+                        <li><a href="javascript:void(0)">Hotel</a></li>
+                        <li><a href="javascript:void(0)">Leisure</a></li>
+                        <li><a href="javascript:void(0)">Medical</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="footer_panel bottom30">
-                    <h4 class="bottom30">Latest data in Rwanda</h4>
-                    <div class="media">
-                        <a class="media-object"><img th:src="@{/images/footer-news1.png}" alt="news"></a>
-                        <div class="media-body">
-                            <a href="#.">Nearest mall in high tech Goes your villa</a>
-                            <span><i class="icon-clock4"></i>Feb 22, 2017</span>
-                        </div>
-                    </div>
-                    <div class="media">
-                        <a class="media-object"><img th:src="@{/images/footer-news1.png}" alt="news"></a>
-                        <div class="media-body">
-                            <a href="#.">Nearest mall in high tech Goes your villa</a>
-                            <span><i class="icon-clock4"></i>Feb 22, 2017</span>
-                        </div>
-                    </div>
-                    <div class="media">
-                        <a class="media-object"><img th:src="@{/images/footer-news1.png}" alt="news"></a>
-                        <div class="media-body">
-                            <a href="#.">Nearest mall in high tech Goes your villa</a>
-                            <span><i class="icon-clock4"></i>Feb 22, 2017</span>
-                        </div>
-                    </div>
+                    <h4 class="bottom30">Rentals</h4>
+                    <ul class="area_search">
+                        <li><a href="javascript:void(0)">Houses<i class="icon-icons74"></i></a></li>
+                        <li class="active"><a href="javascript:void(0)">Apartments</a></li>
+                        <li><a href="javascript:void(0)">Offices</a></li>
+                        <li><a href="javascript:void(0)">Hotel</a></li>
+                        <li><a href="javascript:void(0)">Shops</a></li>
+                        <li><a href="javascript:void(0)">Warehouse</a></li>
+                        <li><a href="javascript:void(0)">Leisure</a></li>
+                        <li><a href="javascript:void(0)">Medical</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="footer_panel bottom30">
-                    <h4 class="bottom30">Get in Touch</h4>
-                    <ul class="getin_touch">
-                        <li><i class="icon-telephone114"></i>01 900 234 567 - 68</li>
-                        <li><a href="javascript:void(0)"><i class="icon-icons142"></i>info@realtyhomes.com</a></li>
-                        <li><a href="javascript:void(0)"><i class="icon-browser2"></i>www.realtyhomes.com</a></li>
-                        <li><i class="icon-icons74"></i>Advisor Melbourne, Merrick Way,FL 12345 australia</li>
+                    <h4 class="bottom30">Real estate consultancy</h4>
+                    <ul class="area_search">
+                        <li><a href="javascript:void(0)">Agency / Brokerage</a></li>
+                        <li class="active"><a href="#">Property management</a></li>
+                        <li><a href="javascript:void(0)">Property valuation</a></li>
+                        <li><a href="javascript:void(0)">Land vs master plan advisory</a></li>
+                        <li><a href="javascript:void(0)">Real estate development</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="footer_panel bottom30">
+                    <h4 class="bottom30">Civil engineering consultancy</h4>
+                    <ul class="area_search">
+                        <li><a href="javascript:void(0)">Construction project study</a></li>
+                        <li class="active"><a href="javascript:void(0)">Construction supervision</a></li>
+                        <li><a href="javascript:void(0)">Construction management</a></li>
+                        <li><a href="javascript:void(0)">Application of construction permit</a></li>
+                        <li><a href="javascript:void(0)">Topography, GIS & Mapping</a></li>
+                        <li><a href="javascript:void(0)">Medical</a></li>
                     </ul>
                 </div>
             </div>
@@ -859,19 +776,75 @@
         <div class="modal-dialog animated">
             <div class="modal-content">
                 <form class="form-horizontal" method="get">
-                    <div class="modal-header" style="background-color: #0a4a56">
-                        <span style="color: #FFFFFF; font-size: 15px"><b>Search</b></span>
+                    <div class="modal-header" style="background-color: #ebedfe">
+                        <span style="color: #df4905; font-size: 15px"><b>Search</b></span>
                     </div>
 
                     <div class="modal-body">
-                        <div class="form-group">
-                            <div class="input-group col-xs-7" style="padding: 20px">
-                                <input placeholder="Search" type="text" name="username" id="username" class="form-control" />
+                        <div class="form-group callus search_modal">
+                            <div class="col-md-3 col-sm-6">
+                                <div class="single-query form-group">
+                                    <input type="text" class="keyword-input" placeholder="Maximum price">
+                                </div>
                             </div>
-                            <div>
-                                <input type="button" value="Search"/>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="single-query form-group">
+                                <select id="property_category">
+                                    <option>House</option>
+                                    <option>Apartment</option>
+                                    <option>Hotel</option>
+                                    <option>Land</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="single-query form-group">
+                                <select id="rent_or_sale">
+                                    <option>For rent</option>
+                                    <option>For sale</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="col-md-12 co-sm-12" style="padding: 20px">
+                                <input type="button" value="Search" class="btn btn-primary"/>
                             </div>
                             <div id="search_response" style="padding: 20px; color: black">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-default" type="button" onclick="modal.close();">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="login_modal" class="modal">
+        <div class="modal-dialog animated">
+            <div class="modal-content">
+                <form class="form-horizontal" method="get">
+                    <div class="modal-header" style="background-color: #ebedfe">
+                        <span style="color: #df4905; font-size: 15px"><b>Sign in</b></span>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="form-group callus search_modal">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="single-query form-group">
+                                    <input type="text" class="keyword-input" placeholder="Username">
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12">
+                                <div class="single-query form-group">
+                                    <input type="text" class="keyword-input" placeholder="Password">
+                                </div>
+                            </div>
+                            <div class="col-md-12 co-sm-12" style="padding: 20px">
+                                <input type="button" value="Login" class="btn btn-primary"/>
+                            </div>
+
+                            <div id="login_response" style="padding: 20px; color: black">
                             </div>
                         </div>
                     </div>
