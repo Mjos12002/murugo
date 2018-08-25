@@ -197,8 +197,8 @@ p{
 	background:#fff;
 }
 .grey{
-    background:#026465; /* kuyikoraho topbar kuyihindura ibara*#086668/ */
-    color: #ffffff;
+    background: #EEEFF2; /* kuyikoraho topbar kuyihindura ibara*#086668/ */
+    color: #000000;
 }
 .grey container row a {
     color: #FFFFFF;
@@ -810,13 +810,11 @@ header.index4 .info-box {
 }
 nav.navbar.bootsnav{ 
   border:none;
-  -webkit-box-shadow:0 0 3px 0 #9e9e9e;
-  box-shadow:0 0 3px 0 #9e9e9e;
 }
 .layout_dark nav.navbar.bootsnav, 
 .layout_default nav.navbar.bootsnav, 
 .layout_boxed nav.navbar.bootsnav{
-  background-color: #082C4E;
+  background-color: #293443;
 }
 .white_header nav.navbar.bootsnav {
   background-color: #fff;
@@ -1366,9 +1364,10 @@ button{
 }
 
 .blue_navi{ 
-   background:#1f3f81;
+   background:#e7e7e5;
    padding:20px 10px 0 10px;
    position:static;
+   color: #000000;
 }
 .blue_navi.static, .static{ 
    position:fixed; 

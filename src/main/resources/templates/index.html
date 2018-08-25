@@ -7,6 +7,13 @@
     <title>Mu rugo app</title>
     <div class="" th:replace="includes/styles/index :: principal"></div>
 </head>
+<style>
+    .search_options{
+        color: #0a3d48;
+        padding: 20px;
+        font-size: 16px;
+    }
+</style>
 <body>
 <div class="loader">
     <div class="span">
@@ -14,130 +21,83 @@
     </div>
 </div>
 <!--Header-->
-<header class="layout_default">
-    <div class="topbar grey">
+<header class="white_header">
+    <div class="topbar white border">
         <div class="container">
             <div class="row">
                 <div class="col-md-5">
-                    <p style="font-size: 16px; color: #FFFFFF"><span style = "background-color: #0a4a56; padding: 10px; border-radius: 5px">MU RUGO</span></p>
+                    <p></p>
                 </div>
                 <div class="col-md-7 text-right">
                     <ul class="breadcrumb_top text-right">
-                        <li><a style="color: #FFFFFF" th:href="@{/login}"><i class="icon-icons179"></i>Sign in / Sign up</a></li>
-                        <li><a style="color: #FFFFFF; margin-left: 10px; margin-right: 10px" th:href="@{/contact_us}">Contact Us</a></li>
-                        <li><a style="color: #FFFFFF" onclick="showSearchModal()" href="#">Search</a></li>
+                        <li><a href="submit_property.html" style="color: #df4905"><i style="color: #0a3d48" class="icon-icons215"></i>Offer Property</a></li>
+                        <li><a href="login.html" style="color: #df4905"><i style="color: #0a3d48" class="icon-icons179"></i>Sign up / Sign in</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-default navbar-sticky bootsnav">
+    <nav class="navbar navbar-default bootsnav">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <!-- Start Header Navigation -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                            <i class="fa fa-bars"></i>
-                        </button>
-                    </div> <!-- End Header Navigation -->
-                    <div class="collapse navbar-collapse" id="navbar-menu">
-                        <ul class="nav navbar-nav" data-in="fadeIn" data-out="fadeOut">
-                            <li class="dropdown active">
-                                <a href="#." class="dropdown-toggle" data-toggle="dropdown">Buy</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="index.html">Castle</a></li>
-                                    <li><a href="index2.html">Land</a></li>
-                                    <li><a href="index3.html">Residential house</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown megamenu-fw">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Rent</a>
-                                <ul class="dropdown-menu megamenu-content" role="menu">
-                                    <li>
-                                        <div class="row">
-                                            <div class="col-menu col-md-3">
-                                                <h5 class="title">PROPERTIES LIST</h5>
-                                                <div class="content">
-                                                    <ul class="menu-col">
-                                                        <li><a href="listing1.html">Properties List</a></li>
-                                                        <li><a href="index7.html">Single Property</a></li>
-                                                        <li><a href="listing2.html">Search by City</a></li>
-                                                        <li><a href="listing5.html">Search by Category</a></li>
-                                                        <li><a href="listing3.html">Search by Type</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col-menu col-md-9">
-                                                <h5 class="title bottom20">PROPERTIES LIST</h5>
-                                                <div class="row">
-                                                    <div id="nav_slider" class="owl-carousel">
-                                                        <div class="item">
-                                                            <div class="image bottom15">
-                                                                <img th:src="@{/images/nav-slider1.jpg}" alt="Featured Property">
-                                                                <span class="nav_tag yellow text-uppercase">for rent</span>
-                                                            </div>
-                                                            <h4><a href="property_detail1.html">Park Avenue Apartment</a></h4>
-                                                            <p>Towson London, MR 21501</p>
-                                                        </div>
-                                                        <div class="item">
-                                                            <div class="image bottom15">
-                                                                <img th:src="@{/images/nav-slider2.jpg}" alt="Featured Property">
-                                                                <span class="nav_tag yellow text-uppercase">for rent</span>
-                                                            </div>
-                                                            <h4><a href="property_detail2.html">Park Avenue Apartment</a></h4>
-                                                            <p>Towson London, MR 21501</p>
-                                                        </div>
-                                                        <div class="item">
-                                                            <div class="image bottom15">
-                                                                <img th:src="@{/images/nav-slider3.jpg}" alt="Featured Property">
-                                                                <span class="nav_tag yellow text-uppercase">for rent</span>
-                                                            </div>
-                                                            <h4><a href="property_detail3.html">Park Avenue Apartment</a></h4>
-                                                            <p>Towson London, MR 21501</p>
-                                                        </div>
-                                                        <div class="item">
-                                                            <div class="image bottom15">
-                                                                <img th:src="@{/images/nav-slider1.jpg}" alt="Featured Property">
-                                                                <span class="nav_tag yellow text-uppercase">for rent</span>
-                                                            </div>
-                                                            <h4><a href="property_detail1.html">Park Avenue Apartment</a></h4>
-                                                            <p>Towson London, MR 21501</p>
-                                                        </div>
-                                                        <div class="item">
-                                                            <div class="image bottom15">
-                                                                <img th:src="@{/images/nav-slider2.jpg}" alt="Featured Property">
-                                                                <span class="nav_tag yellow text-uppercase">for rent</span>
-                                                            </div>
-                                                            <h4><a href="property_detail2.html">Park Avenue Apartment</a></h4>
-                                                            <p>Towson London, MR 21501</p>
-                                                        </div>
-                                                        <div class="item">
-                                                            <div class="image bottom15">
-                                                                <img th:src="@{/images/nav-slider3.jpg}" alt="Featured Property">
-                                                                <span class="nav_tag yellow text-uppercase">for rent</span>
-                                                            </div>
-                                                            <h4><a href="property_detail3.html">Park Avenue Apartment</a></h4>
-                                                            <p>Towson London, MR 21501</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a th:href="@{/book_property}">Book</a></li>
-                            <li><a th:href="@{/submit_property}">Submit property</a></li>
-                        </ul>
-                    </div>
-                </div>
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <p style="font-size: 20px">Murugo app</p>
+            </div>
+            <!-- End Header Navigation -->
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav navbar-right" data-in="fadeIn" data-out="fadeOut" style="margin-right: 40%; background-color: #e7e7e5">
+                    <li class="dropdown active">
+                        <a href="#." class="dropdown-toggle" data-toggle="dropdown">Buy </a>
+                    </li>
+                    <li class="dropdown megamenu-fw">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sell</a>
+                    </li>
+                    <li class="dropdown megamenu-fw">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Book</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
 </header>
 <!--Header Ends-->
+<div class="blue_navi">
+    <div class="container">
+        <div class="row">
+            <div class="property-query-area">
 
+                <form class="callus clearfix">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="single-query form-group">
+                            <input type="text" class="keyword-input" placeholder="Search using keywords">
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="single-query form-group">
+                            <div class="intro">
+                                <select>
+                                    <option selected="" value="any">Location</option>
+                                    <option>All areas</option>
+                                    <option>Kigali city</option>
+                                    <option>Eastern province</option>
+                                    <option>Northern province</option>
+                                    <option>Southern province</option>
+                                    <option>Western province</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-12 text-right">
+                        <button type="button" class="advanced text-center text-uppercase border_radius"><i class="icon-settings"></i>advanced</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <!--Slider-->
 <div class="rev_slider_wrapper">
     <div id="rev_slider_third" class="rev_slider"  data-version="5.0">
@@ -154,7 +114,7 @@
                      data-transform_in="x:-50px;opacity:0;s:2000;e:Power3.easeOut;"
                      data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;">
                     <h2>Family House in Butare</h2>
-                    <p class="bottom30">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam power
+                    <p class="bottom30">The house has the best garden you can think of ...
                         <br> nonummy nibh...
                     </p>
                     <div class="property_meta">
@@ -167,8 +127,8 @@
                         <span><i class="icon-safety-shower"></i>2 bathrooms</span>
                     </div>
                     <div class="bottom row">
-                        <div class="col-sm-6"><span> <i class="icon-icons74"></i>Bayonne, New Jersey</span></div>
-                        <div class="col-sm-6"><span>$8,600 Per Month -<small> Apartment</small></span></div>
+                        <div class="col-sm-6"><span>Nyarugenge, Kigali city</span></div>
+                        <div class="col-sm-6"><span>1,000,000 Frw Per Month </span></div>
                     </div>
                 </div>
             </li>
@@ -182,9 +142,9 @@
                      data-transform_idle="o:1;"
                      data-transform_in="x:-50px;opacity:0;s:2000;e:Power3.easeOut;"
                      data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" >
-                    <h2>Family House in Kigali</h2>
-                    <p class="bottom30">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam power
-                        <br> nonummy nibh...
+                    <h2>House in Gasabo</h2>
+                    <p class="bottom30">You have view over the best hills in Kigali
+                        <br>
                     </p>
                     <div class="property_meta">
                         <span><i class="icon-select-an-objecto-tool"></i>4800 sq ft</span>
@@ -196,8 +156,8 @@
                         <span><i class="icon-safety-shower"></i>2 bathrooms</span>
                     </div>
                     <div class="bottom row">
-                        <div class="col-sm-6"><span> <i class="icon-icons74"></i>Bayonne, New Jersey</span></div>
-                        <div class="col-sm-6"><span>$8,600 Per Month - Apartment</span></div>
+                        <div class="col-sm-6"><span>Rusororo, Kigali</span></div>
+                        <div class="col-sm-6"><span>950,600 Per Month - Garage</span></div>
                     </div>
                 </div>
             </li>
@@ -211,22 +171,19 @@
                      data-transform_idle="o:1;"
                      data-transform_in="x:-50px;opacity:0;s:2000;e:Power3.easeOut;"
                      data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" >
-                    <h2>Family House in Hudson</h2>
-                    <p class="bottom30">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam power
-                        <br> nonummy nibh...
+                    <h2>Land in Kigali</h2>
+                    <p class="bottom30">In case you want to have a good land to own
+                        <br>
                     </p>
                     <div class="property_meta">
                         <span><i class="icon-select-an-objecto-tool"></i>4800 sq ft</span>
-                        <span><i class="icon-bed"></i>3 Bedrooms</span>
-                        <span><i class="icon-pool-stairs"></i>Swimming Pool</span>
                     </div>
                     <div class="property_meta bottom30">
-                        <span><i class="icon-garage"></i>1 Garage</span>
-                        <span><i class="icon-safety-shower"></i>2 bathrooms</span>
+
                     </div>
                     <div class="bottom row">
-                        <div class="col-sm-6"><span> <i class="icon-icons74"></i>Bayonne, New Jersey</span></div>
-                        <div class="col-sm-6"><span>$8,600 Per Month - Apartment</span></div>
+                        <div class="col-sm-6"><span>Kicukiro, Kigali</span></div>
+                        <div class="col-sm-6"><span>80,000,000</span></div>
                     </div>
                 </div>
             </li>
@@ -234,420 +191,421 @@
     </div>
     <!-- END REVOLUTION SLIDER -->
 </div>
-
-<!--Advance Search-->
-<section class="property-query-area bg_light">
-    <div class="container">
-        <p><h4>Advanced search</h4></p>
-        <div class="row advanced_search_box">
-            <form class="callus">
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-query form-group">
-                        <input type="text" class="keyword-input" placeholder="Enter neighbourhood">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-query form-group">
-                        <div class="intro">
-                            <select>
-                                <option selected="" value="any">Listing type</option>
-                                <option>For rent</option>
-                                <option>For sale</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-query form-group">
-                        <div class="intro">
-                            <select>
-                                <option class="active">Price range</option>
-                                <option>100 - 500</option>
-                                <option>100 - 1000 </option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-query form-group">
-                        <div class="intro">
-                            <select>
-                                <option class="active">Property type</option>
-                                <option>House</option>
-                                <option>Apartment</option>
-                                <option>Office</option>
-                                <option>Land</option>
-                                <option>Shop</option>
-                                <option>Warehouse</option>
-                                <option>Hotel</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-4 text-right form-group">
-                            <button type="submit" class="btn-blue border_radius top15"><i class="fa fa-search"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
-
-<!--Advance Search-->
-
 <!--Best Deals-->
-<section id="deals" class="padding bg_light">
+<section id="property" class="padding bg_gallery">
     <div class="container">
         <div class="row">
-            <div class="col-sm-10">
-                <h2 class="uppercase">Best Deal Properties</h2>
-                <p class="heading_space">We have Properties in these Areas View a list of Featured Properties.</p>
+            <div class="col-sm-12 text-center">
+                <h2 class="uppercase">real estate properties</h2>
+                <p class="heading_space">We deal with different kind of properties; house, apartment and land.</p>
             </div>
         </div>
-        <div class="row">
-            <div class="three-item owl-carousel">
-                <div class="item feature_item">
-                    <div class="image"><a href="#."> <img th:src="@{/images/featured1.jpg}" alt="Featured Property"></a>
+        <div class="clearfix">
+            <div id="filters-property" class="cbp-l-filters-button text-center">
+                <div data-filter=".latest" class="cbp-filter-item-active cbp-filter-item">LATEST</div>
+                <div data-filter=".sale" class="cbp-filter-item">SALE</div>
+                <div data-filter=".rent" class="cbp-filter-item">RENT</div>
+            </div>
+        </div>
+        <div id="property-gallery" class="cbp listing1">
+            <div class="cbp-item latest sale">
+                <div class="property_item">
+                    <div class="image">
+                        <a href="property_detail1.html"><img src="images/listing1.jpg" alt="latest property" class="img-responsive"></a>
+                        <div class="price clearfix">
+                            <span class="tag pull-right">$8,600 Per Month</span>
+                        </div>
+                        <span class="tag_t">For Sale</span>
+                        <span class="tag_l">Featured</span>
                     </div>
                     <div class="proerty_content">
                         <div class="proerty_text">
-                            <h3 class="bottom15"><a href="#.">Park Avenue Apartment</a></h3>
-                            <p>nonummy nibh tempor soluta consectetuer adipiscing cum eleifend…</p>
-                            <h4 class="top15">$8,600 Per Month - <small>Family Home</small></h4>
+                            <h3 class="captlize"><a href="property_detail1.html">Park avenue apartment</a></h3>
+                            <p>45 Regent Street, London, UK</p>
                         </div>
-                        <table class="table table-responsive">
-                            <tbody>
-                            <tr>
-                                <td><i class="icon-select-an-objecto-tool"></i>Total Area</td>
-                                <td class="text-right">4800 sq ft</td>
-                            </tr>
-                            <tr>
-                                <td><i class="icon-bed"></i>BadRooms</td>
-                                <td class="text-right">5</td>
-                            </tr>
-                            <tr>
-                                <td><i class="icon-safety-shower"></i>BathRooms</td>
-                                <td class="text-right">5</td>
-                            </tr>
-                            <tr>
-                                <td><i class="icon-garage"></i>Garage</td>
-                                <td class="text-right">1</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="item feature_item">
-                    <div class="image"><a href="#."> <img th:src="@{/images/featured2.jpg}" alt="Featured Property"></a>
-                        <span class="price default_clr">For Sale</span>
-                    </div>
-                    <div class="proerty_content">
-                        <div class="proerty_text">
-                            <h3 class="bottom15"><a href="#.">Park Avenue Apartment</a></h3>
-                            <p>nonummy nibh tempor soluta consectetuer adipiscing cum eleifend…</p>
-                            <h4 class="top15">$8,600 Per Month - <small>Family Home</small></h4>
+                        <div class="property_meta transparent">
+                            <span><i class="icon-select-an-objecto-tool"></i>4800 sq ft</span>
+                            <span><i class="icon-bed"></i>2 Office Rooms</span>
+                            <span><i class="icon-safety-shower"></i>1 Bathroom</span>
                         </div>
-                        <table class="table table-responsive">
-                            <tbody>
-                            <tr>
-                                <td><i class="icon-select-an-objecto-tool"></i>Total Area</td>
-                                <td class="text-right">4800 sq ft</td>
-                            </tr>
-                            <tr>
-                                <td><i class="icon-bed"></i>BadRooms</td>
-                                <td class="text-right">5</td>
-                            </tr>
-                            <tr>
-                                <td><i class="icon-safety-shower"></i>BathRooms</td>
-                                <td class="text-right">5</td>
-                            </tr>
-                            <tr>
-                                <td><i class="icon-garage"></i>Garage</td>
-                                <td class="text-right">1</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="item feature_item">
-                    <div class="image"><a href="#."> <img th:src="@{/images/featured3.jpg}" alt="Featured Property"></a>
-                    </div>
-                    <div class="proerty_content">
-                        <div class="proerty_text">
-                            <h3 class="bottom15"><a href="#.">Park Avenue Apartment</a></h3>
-                            <p>nonummy nibh tempor soluta consectetuer adipiscing cum eleifend…</p>
-                            <h4 class="top15">$8,600 Per Month - <small>Family Home</small></h4>
+                        <div class="property_meta transparent bottom30">
+                            <span><i class="icon-old-television"></i>TV Lounge</span>
+                            <span><i class="icon-garage"></i>1 Garage</span>
+                            <span></span>
                         </div>
-                        <table class="table table-responsive">
-                            <tbody>
-                            <tr>
-                                <td><i class="icon-select-an-objecto-tool"></i>Total Area</td>
-                                <td class="text-right">4800 sq ft</td>
-                            </tr>
-                            <tr>
-                                <td><i class="icon-bed"></i>BadRooms</td>
-                                <td class="text-right">5</td>
-                            </tr>
-                            <tr>
-                                <td><i class="icon-safety-shower"></i>BathRooms</td>
-                                <td class="text-right">5</td>
-                            </tr>
-                            <tr>
-                                <td><i class="icon-garage"></i>Garage</td>
-                                <td class="text-right">1</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="item feature_item">
-                    <div class="image"> <a href="#."><img th:src="@{/images/featured1.jpg}" alt="Featured Property"> </a>
-                        <span class="price default_clr">For Sale</span>
-                    </div>
-                    <div class="proerty_content">
-                        <div class="proerty_text">
-                            <h3 class="bottom15"><a href="#.">Park Avenue Apartment</a></h3>
-                            <p>nonummy nibh tempor soluta consectetuer adipiscing cum eleifend…</p>
-                            <h4 class="top15">$8,600 Per Month - <small>Family Home</small></h4>
+                        <div class="favroute clearfix">
+                            <p><i class="icon-calendar2"></i>&nbsp;5 Days ago </p>
+                            <ul class="pull-right">
+                                <li><a href="javascript:void(0)"><i class="icon-like"></i></a></li>
+                                <li><a href="#seventy" class="share_expender" data-toggle="collapse"><i class="icon-share3"></i></a></li>
+                            </ul>
                         </div>
-                        <table class="table table-responsive">
-                            <tbody>
-                            <tr>
-                                <td><i class="icon-select-an-objecto-tool"></i>Total Area</td>
-                                <td class="text-right">4800 sq ft</td>
-                            </tr>
-                            <tr>
-                                <td><i class="icon-bed"></i>BadRooms</td>
-                                <td class="text-right">5</td>
-                            </tr>
-                            <tr>
-                                <td><i class="icon-safety-shower"></i>BathRooms</td>
-                                <td class="text-right">5</td>
-                            </tr>
-                            <tr>
-                                <td><i class="icon-garage"></i>Garage</td>
-                                <td class="text-right">1</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="item feature_item">
-                    <div class="image"><a href="#."> <img th:src="@{/images/featured2.jpg}" alt="Featured Property"> </a>
-                        <span class="price default_clr">For Rent</span>
-                    </div>
-                    <div class="proerty_content">
-                        <div class="proerty_text">
-                            <h3 class="bottom15"><a href="#.">Park Avenue Apartment</a></h3>
-                            <p>nonummy nibh tempor soluta consectetuer adipiscing cum eleifend…</p>
-                            <h4 class="top15">$8,600 Per Month - <small>Family Home</small></h4>
+                        <div class="toggle_share collapse" id="seventy">
+                            <ul>
+                                <li><a href="javascript:void(0)" class="facebook"><i class="icon-facebook-1"></i> Facebook</a></li>
+                                <li><a href="javascript:void(0)" class="twitter"><i class="icon-twitter-1"></i> Twitter</a></li>
+                                <li><a href="javascript:void(0)" class="vimo"><i class="icon-vimeo3"></i> Vimeo</a></li>
+                            </ul>
                         </div>
-                        <table class="table table-responsive">
-                            <tbody>
-                            <tr>
-                                <td><i class="icon-select-an-objecto-tool"></i>Total Area</td>
-                                <td class="text-right">4800 sq ft</td>
-                            </tr>
-                            <tr>
-                                <td><i class="icon-bed"></i>BadRooms</td>
-                                <td class="text-right">5</td>
-                            </tr>
-                            <tr>
-                                <td><i class="icon-safety-shower"></i>BathRooms</td>
-                                <td class="text-right">5</td>
-                            </tr>
-                            <tr>
-                                <td><i class="icon-garage"></i>Garage</td>
-                                <td class="text-right">1</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="item feature_item">
-                    <div class="image"> <a href="#."><img th:src="@{/images/featured3.jpg}" alt="Featured Property"> </a>
-                        <span class="price default_clr">For Rent</span>
-                    </div>
-                    <div class="proerty_content">
-                        <div class="proerty_text">
-                            <h3 class="bottom15"><a href="#.">Park Avenue Apartment</a></h3>
-                            <p>nonummy nibh tempor soluta consectetuer adipiscing cum eleifend…</p>
-                            <h4 class="top15">$8,600 Per Month - <small>Family Home</small></h4>
-                        </div>
-                        <table class="table table-responsive">
-                            <tbody>
-                            <tr>
-                                <td><i class="icon-select-an-objecto-tool"></i>Total Area</td>
-                                <td class="text-right">4800 sq ft</td>
-                            </tr>
-                            <tr>
-                                <td><i class="icon-bed"></i>BadRooms</td>
-                                <td class="text-right">5</td>
-                            </tr>
-                            <tr>
-                                <td><i class="icon-safety-shower"></i>BathRooms</td>
-                                <td class="text-right">5</td>
-                            </tr>
-                            <tr>
-                                <td><i class="icon-garage"></i>Garage</td>
-                                <td class="text-right">1</td>
-                            </tr>
-                            </tbody>
-                        </table>
                     </div>
                 </div>
             </div>
+            <div class="cbp-item latest rent">
+                <div class="property_item">
+                    <div class="image">
+                        <a href="property_detail2.html"><img src="images/listing2.jpg" alt="latest property" class="img-responsive"></a>
+                        <div class="price clearfix">
+                            <span class="tag pull-right">$8,600 Per Month</span>
+                        </div>
+                        <span class="tag_t">For Rent</span>
+                    </div>
+                    <div class="proerty_content">
+                        <div class="proerty_text">
+                            <h3 class="captlize"><a href="property_detail2.html">Park avenue apartment</a></h3>
+                            <p>45 Regent Street, London, UK</p>
+                        </div>
+                        <div class="property_meta transparent">
+                            <span><i class="icon-select-an-objecto-tool"></i>4800 sq ft</span>
+                            <span><i class="icon-bed"></i>2 Office Rooms</span>
+                            <span><i class="icon-safety-shower"></i>1 Bathroom</span>
+                        </div>
+                        <div class="property_meta transparent bottom30">
+                            <span><i class="icon-old-television"></i>TV Lounge</span>
+                            <span><i class="icon-garage"></i>1 Garage</span>
+                            <span></span>
+                        </div>
+                        <div class="favroute clearfix">
+                            <p><i class="icon-calendar2"></i>&nbsp;5 Days ago </p>
+                            <ul class="pull-right">
+                                <li><a href="javascript:void(0)"><i class="icon-like"></i></a></li>
+                                <li><a href="#six" class="share_expender" data-toggle="collapse"><i class="icon-share3"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="toggle_share collapse" id="six">
+                            <ul>
+                                <li><a href="javascript:void(0)" class="facebook"><i class="icon-facebook-1"></i> Facebook</a></li>
+                                <li><a href="javascript:void(0)" class="twitter"><i class="icon-twitter-1"></i> Twitter</a></li>
+                                <li><a href="javascript:void(0)" class="vimo"><i class="icon-vimeo3"></i> Vimeo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-item latest sale">
+                <div class="property_item">
+                    <div class="image">
+                        <a href="property_detail3.html"><img src="images/listing3.jpg" alt="latest property" class="img-responsive"></a>
+                        <div class="price clearfix">
+                            <span class="tag pull-right">$8,600 Per Month</span>
+                        </div>
+                        <span class="tag_t">For Sale</span>
+                        <span class="tag_l">Featured</span>
+                    </div>
+                    <div class="proerty_content">
+                        <div class="proerty_text">
+                            <h3 class="captlize"><a href="property_detail3.html">Park avenue apartment</a></h3>
+                            <p>45 Regent Street, London, UK</p>
+                        </div>
+                        <div class="property_meta transparent">
+                            <span><i class="icon-select-an-objecto-tool"></i>4800 sq ft</span>
+                            <span><i class="icon-bed"></i>2 Office Rooms</span>
+                            <span><i class="icon-safety-shower"></i>1 Bathroom</span>
+                        </div>
+                        <div class="property_meta transparent bottom30">
+                            <span><i class="icon-old-television"></i>TV Lounge</span>
+                            <span><i class="icon-garage"></i>1 Garage</span>
+                            <span></span>
+                        </div>
+                        <div class="favroute clearfix">
+                            <p><i class="icon-calendar2"></i>&nbsp;5 Days ago </p>
+                            <ul class="pull-right">
+                                <li><a href="javascript:void(0)"><i class="icon-like"></i></a></li>
+                                <li><a href="#three" class="share_expender" data-toggle="collapse"><i class="icon-share3"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="toggle_share collapse" id="three">
+                            <ul>
+                                <li><a href="javascript:void(0)" class="facebook"><i class="icon-facebook-1"></i> Facebook</a></li>
+                                <li><a href="javascript:void(0)" class="twitter"><i class="icon-twitter-1"></i> Twitter</a></li>
+                                <li><a href="javascript:void(0)" class="vimo"><i class="icon-vimeo3"></i> Vimeo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-item latest rent">
+                <div class="property_item">
+                    <div class="image">
+                        <a href="property_detail1.html"><img src="images/listing4.jpg" alt="latest property" class="img-responsive"></a>
+                        <div class="price clearfix">
+                            <span class="tag pull-right">$8,600 Per Month</span>
+                        </div>
+                        <span class="tag_t">For Rent</span>
+                    </div>
+                    <div class="proerty_content">
+                        <div class="proerty_text">
+                            <h3 class="captlize"><a href="property_detail1.html">Park avenue apartment</a></h3>
+                            <p>45 Regent Street, London, UK</p>
+                        </div>
+                        <div class="property_meta transparent">
+                            <span><i class="icon-select-an-objecto-tool"></i>4800 sq ft</span>
+                            <span><i class="icon-bed"></i>2 Office Rooms</span>
+                            <span><i class="icon-safety-shower"></i>1 Bathroom</span>
+                        </div>
+                        <div class="property_meta transparent bottom30">
+                            <span><i class="icon-old-television"></i>TV Lounge</span>
+                            <span><i class="icon-garage"></i>1 Garage</span>
+                            <span></span>
+                        </div>
+                        <div class="favroute clearfix">
+                            <p><i class="icon-calendar2"></i>&nbsp;5 Days ago </p>
+                            <ul class="pull-right">
+                                <li><a href="javascript:void(0)"><i class="icon-like"></i></a></li>
+                                <li><a href="#twe" class="share_expender" data-toggle="collapse"><i class="icon-share3"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="toggle_share collapse" id="twe">
+                            <ul>
+                                <li><a href="javascript:void(0)" class="facebook"><i class="icon-facebook-1"></i> Facebook</a></li>
+                                <li><a href="javascript:void(0)" class="twitter"><i class="icon-twitter-1"></i> Twitter</a></li>
+                                <li><a href="javascript:void(0)" class="vimo"><i class="icon-vimeo3"></i> Vimeo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-item latest sale">
+                <div class="property_item">
+                    <div class="image">
+                        <a href="property_detail2.html"><img src="images/listing8.jpg" alt="latest property" class="img-responsive"></a>
+                        <div class="price clearfix">
+                            <span class="solid">Solid Out</span>
+                        </div>
+                        <span class="tag_t">For Sale</span>
+                    </div>
+                    <div class="proerty_content">
+                        <div class="proerty_text">
+                            <h3 class="captlize"><a href="property_detail2.html">Park avenue apartment</a></h3>
+                            <p>45 Regent Street, London, UK</p>
+                        </div>
+                        <div class="property_meta transparent">
+                            <span><i class="icon-select-an-objecto-tool"></i>4800 sq ft</span>
+                            <span><i class="icon-bed"></i>2 Office Rooms</span>
+                            <span><i class="icon-safety-shower"></i>1 Bathroom</span>
+                        </div>
+                        <div class="property_meta transparent bottom30">
+                            <span><i class="icon-old-television"></i>TV Lounge</span>
+                            <span><i class="icon-garage"></i>1 Garage</span>
+                            <span></span>
+                        </div>
+                        <div class="favroute clearfix">
+                            <p><i class="icon-calendar2"></i>&nbsp;5 Days ago </p>
+                            <ul class="pull-right">
+                                <li><a href="javascript:void(0)"><i class="icon-like"></i></a></li>
+                                <li><a href="#twomore" class="share_expender" data-toggle="collapse"><i class="icon-share3"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="toggle_share collapse" id="twomore">
+                            <ul>
+                                <li><a href="javascript:void(0)" class="facebook"><i class="icon-facebook-1"></i> Facebook</a></li>
+                                <li><a href="javascript:void(0)" class="twitter"><i class="icon-twitter-1"></i> Twitter</a></li>
+                                <li><a href="javascript:void(0)" class="vimo"><i class="icon-vimeo3"></i> Vimeo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-item latest sale">
+                <div class="property_item">
+                    <div class="image">
+                        <a href="property_detail3.html"><img src="images/listing6.jpg" alt="latest property" class="img-responsive"></a>
+                        <div class="price clearfix">
+                            <span class="tag pull-right">$8,600 Per Month</span>
+                        </div>
+                        <span class="tag_t">For Sale</span>
+                        <span class="tag_l">Featured</span>
+                    </div>
+                    <div class="proerty_content">
+                        <div class="proerty_text">
+                            <h3 class="captlize"><a href="property_detail3.html">Park avenue apartment</a></h3>
+                            <p>45 Regent Street, London, UK</p>
+                        </div>
+                        <div class="property_meta transparent">
+                            <span><i class="icon-select-an-objecto-tool"></i>4800 sq ft</span>
+                            <span><i class="icon-bed"></i>2 Office Rooms</span>
+                            <span><i class="icon-safety-shower"></i>1 Bathroom</span>
+                        </div>
+                        <div class="property_meta transparent bottom30">
+                            <span><i class="icon-old-television"></i>TV Lounge</span>
+                            <span><i class="icon-garage"></i>1 Garage</span>
+                            <span></span>
+                        </div>
+                        <div class="favroute clearfix">
+                            <p><i class="icon-calendar2"></i>&nbsp;5 Days ago </p>
+                            <ul class="pull-right">
+                                <li><a href="javascript:void(0)"><i class="icon-like"></i></a></li>
+                                <li><a href="#one" class="share_expender" data-toggle="collapse"><i class="icon-share3"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="toggle_share collapse" id="one">
+                            <ul>
+                                <li><a href="javascript:void(0)" class="facebook"><i class="icon-facebook-1"></i> Facebook</a></li>
+                                <li><a href="javascript:void(0)" class="twitter"><i class="icon-twitter-1"></i> Twitter</a></li>
+                                <li><a href="javascript:void(0)" class="vimo"><i class="icon-vimeo3"></i> Vimeo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-item latest rent">
+                <div class="property_item">
+                    <div class="image">
+                        <a href="property_detail1.html"><img src="images/listing7.jpg" alt="latest property" class="img-responsive"></a>
+                        <div class="price clearfix">
+                            <span class="tag pull-right">$8,600 Per Month</span>
+                        </div>
+                        <span class="tag_t">For Rent</span>
+                        <span class="tag_l">Featured</span>
+                    </div>
+                    <div class="proerty_content">
+                        <div class="proerty_text">
+                            <h3 class="captlize"><a href="property_detail1.html">Park avenue apartment</a></h3>
+                            <p>45 Regent Street, London, UK</p>
+                        </div>
+                        <div class="property_meta transparent">
+                            <span><i class="icon-select-an-objecto-tool"></i>4800 sq ft</span>
+                            <span><i class="icon-bed"></i>2 Office Rooms</span>
+                            <span><i class="icon-safety-shower"></i>1 Bathroom</span>
+                        </div>
+                        <div class="property_meta transparent bottom30">
+                            <span><i class="icon-old-television"></i>TV Lounge</span>
+                            <span><i class="icon-garage"></i>1 Garage</span>
+                            <span></span>
+                        </div>
+                        <div class="favroute clearfix">
+                            <p><i class="icon-calendar2"></i>&nbsp;5 Days ago </p>
+                            <ul class="pull-right">
+                                <li><a href="javascript:void(0)"><i class="icon-like"></i></a></li>
+                                <li><a href="#seven" class="share_expender" data-toggle="collapse"><i class="icon-share3"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="toggle_share collapse" id="seven">
+                            <ul>
+                                <li><a href="javascript:void(0)" class="facebook"><i class="icon-facebook-1"></i> Facebook</a></li>
+                                <li><a href="javascript:void(0)" class="twitter"><i class="icon-twitter-1"></i> Twitter</a></li>
+                                <li><a href="javascript:void(0)" class="vimo"><i class="icon-vimeo3"></i> Vimeo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-item latest sale">
+                <div class="property_item">
+                    <div class="image">
+                        <a href="property_detail2.html"><img src="images/listing5.jpg" alt="latest property" class="img-responsive"></a>
+                        <div class="price clearfix">
+                            <span class="tag pull-right">$8,600 Per Month</span>
+                        </div>
+                        <span class="tag_t">For Sale</span>
+                        <span class="tag_l">Featured</span>
+                    </div>
+                    <div class="proerty_content">
+                        <div class="proerty_text">
+                            <h3 class="captlize"><a href="property_detail2.html">Park avenue apartment</a></h3>
+                            <p>45 Regent Street, London, UK</p>
+                        </div>
+                        <div class="property_meta transparent">
+                            <span><i class="icon-select-an-objecto-tool"></i>4800 sq ft</span>
+                            <span><i class="icon-bed"></i>2 Office Rooms</span>
+                            <span><i class="icon-safety-shower"></i>1 Bathroom</span>
+                        </div>
+                        <div class="property_meta transparent bottom30">
+                            <span><i class="icon-old-television"></i>TV Lounge</span>
+                            <span><i class="icon-garage"></i>1 Garage</span>
+                            <span></span>
+                        </div>
+                        <div class="favroute clearfix">
+                            <p><i class="icon-calendar2"></i>&nbsp;5 Days ago </p>
+                            <ul class="pull-right">
+                                <li><a href="javascript:void(0)"><i class="icon-like"></i></a></li>
+                                <li><a href="#onemore" class="share_expender" data-toggle="collapse"><i class="icon-share3"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="toggle_share collapse" id="onemore">
+                            <ul>
+                                <li><a href="javascript:void(0)" class="facebook"><i class="icon-facebook-1"></i> Facebook</a></li>
+                                <li><a href="javascript:void(0)" class="twitter"><i class="icon-twitter-1"></i> Twitter</a></li>
+                                <li><a href="javascript:void(0)" class="vimo"><i class="icon-vimeo3"></i> Vimeo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-item latest sale">
+                <div class="property_item">
+                    <div class="image">
+                        <a href="property_detail3.html"><img src="images/listing9.jpg" alt="latest property" class="img-responsive"></a>
+                        <div class="price clearfix">
+                            <span class="tag pull-right">$8,600 Per Month</span>
+                        </div>
+                        <span class="tag_t">For Sale</span>
+                    </div>
+                    <div class="proerty_content">
+                        <div class="proerty_text">
+                            <h3 class="captlize"><a href="property_detail3.html">Park avenue apartment</a></h3>
+                            <p>45 Regent Street, London, UK</p>
+                        </div>
+                        <div class="property_meta transparent">
+                            <span><i class="icon-select-an-objecto-tool"></i>4800 sq ft</span>
+                            <span><i class="icon-bed"></i>2 Office Rooms</span>
+                            <span><i class="icon-safety-shower"></i>1 Bathroom</span>
+                        </div>
+                        <div class="property_meta transparent bottom30">
+                            <span><i class="icon-old-television"></i>TV Lounge</span>
+                            <span><i class="icon-garage"></i>1 Garage</span>
+                            <span></span>
+                        </div>
+                        <div class="favroute clearfix">
+                            <p><i class="icon-calendar2"></i>&nbsp;5 Days ago </p>
+                            <ul class="pull-right">
+                                <li><a href="javascript:void(0)"><i class="icon-like"></i></a></li>
+                                <li><a href="#sixy" class="share_expender" data-toggle="collapse"><i class="icon-share3"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="toggle_share collapse" id="sixy">
+                            <ul>
+                                <li><a href="javascript:void(0)" class="facebook"><i class="icon-facebook-1"></i> Facebook</a></li>
+                                <li><a href="javascript:void(0)" class="twitter"><i class="icon-twitter-1"></i> Twitter</a></li>
+                                <li><a href="javascript:void(0)" class="vimo"><i class="icon-vimeo3"></i> Vimeo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 text-center top20">
+            <a href="listing1.html" class="btn-dark border_radius uppercase margin40">more listings</a>
         </div>
     </div>
 </section>
-<!--Best Deal Ends-->
-
-
-<!-- Latest Property -->
-<section id="property" class="padding">
+<section>
     <div class="container">
-        <div class="row">
-            <div class="col-xs-10">
-                <h2 class="uppercase">Newly available properties</h2>
-                <p class="heading_space"> Look below for the latest properties across the country
-                    prices.
-                </p>
-            </div>
+        <div class="col-sm-4">
+            <p>Find your property</p>
+            <p>Some text here</p>
         </div>
-        <div class="row">
-            <div id="two-col-slider" class="owl-carousel">
-                <div class="item">
-                    <div class="property_item heading_space">
-                        <div class="image"> <a href="#."><img th:src="@{/images/latest5.jpg}" alt="latest property" class="img-responsive"></a> </div>
-                        <div class="price default_clr clearfix bottom20">
-                            <span class="tag pull-left">For Rent</span>
-                            <h4 class="pull-right">$8,600 Per Month - <small>Family Home</small></h4>
-                        </div>
-                        <div class="proerty_content">
-                            <div class="proerty_text">
-                                <h3 class="bottom15"> <a href="#.">Unique Villa With Private Beach</a></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam power nonummy nibh tempor cum soluta nobis eleifend option congue nihil imperdiet doming…</p>
-                            </div>
-                            <div class="favroute clearfix">
-                                <p class="pull-md-left">45 Regent Street, London, UK</p>
-                                <ul class="pull-right">
-                                    <li><a href="javascript:void(0)"><i class="icon-video-player"></i></a></li>
-                                    <li><a href="javascript:void(0)"><i class="icon-like"></i></a></li>
-                                    <li><a href="#one" class="share_expender" data-toggle="collapse"><i class="icon-share3"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="toggle_share collapse" id="one">
-                                <ul>
-                                    <li><a href="javascript:void(0)" class="facebook"><i class="icon-facebook-1"></i> Facebook</a></li>
-                                    <li><a href="javascript:void(0)" class="twitter"><i class="icon-twitter-1"></i> Twitter</a></li>
-                                    <li><a href="javascript:void(0)" class="vimo"><i class="icon-vimeo3"></i> Vimeo</a></li>
-                                </ul>
-                            </div>
-                            <div class="property_meta"> <span><i class="icon-select-an-objecto-tool"></i>4800 sq ft</span> <span><i class="icon-bed"></i>3 Bedrooms</span> <span><i class="icon-safety-shower"></i>2 Bedrooms</span> <span><i class="icon-old-television"></i>TV Lounge</span> <span><i class="icon-garage"></i>1 Garage</span> </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="property_item heading_space">
-                        <div class="image"> <a href="#."><img th:src="@{/images/latest6.jpg}" alt="latest property" class="img-responsive"></a> </div>
-                        <div class="price default_clr clearfix bottom20">
-                            <span class="tag pull-left">For Rent</span>
-                            <h4 class="pull-right">$8,600 Per Month - <small>Family Home</small></h4>
-                        </div>
-                        <div class="proerty_content">
-                            <div class="proerty_text">
-                                <h3 class="bottom15"> <a href="#.">Unique Villa With Private Beach</a></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam power nonummy nibh tempor cum soluta nobis eleifend option congue nihil imperdiet doming…</p>
-                            </div>
-                            <div class="favroute clearfix">
-                                <p class="pull-md-left">45 Regent Street, London, UK</p>
-                                <ul class="pull-right">
-                                    <li><a href="javascript:void(0)"><i class="icon-video-player"></i></a></li>
-                                    <li><a href="javascript:void(0)"><i class="icon-like"></i></a></li>
-                                    <li><a href="#two" class="share_expender" data-toggle="collapse"><i class="icon-share3"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="toggle_share collapse" id="two">
-                                <ul>
-                                    <li><a href="javascript:void(0)" class="facebook"><i class="icon-facebook-1"></i> Facebook</a></li>
-                                    <li><a href="javascript:void(0)" class="twitter"><i class="icon-twitter-1"></i> Twitter</a></li>
-                                    <li><a href="javascript:void(0)" class="vimo"><i class="icon-vimeo3"></i> Vimeo</a></li>
-                                </ul>
-                            </div>
-                            <div class="property_meta"> <span><i class="icon-select-an-objecto-tool"></i>4800 sq ft</span> <span><i class="icon-bed"></i>3 Bedrooms</span> <span><i class="icon-safety-shower"></i>2 Bedrooms</span> <span><i class="icon-old-television"></i>TV Lounge</span> <span><i class="icon-garage"></i>1 Garage</span> </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="property_item heading_space">
-                        <div class="image"> <a href="#."><img th:src="@{/images/latest1.jpg}" alt="latest property" class="img-responsive"></a> </div>
-                        <div class="price default_clr clearfix bottom20">
-                            <span class="tag pull-left">For Rent</span>
-                            <h4 class="pull-right">$8,600 Per Month - <small>Family Home</small></h4>
-                        </div>
-                        <div class="proerty_content">
-                            <div class="proerty_text">
-                                <h3 class="bottom15"> <a href="#.">Unique Villa With Private Beach</a></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam power nonummy nibh tempor cum soluta nobis eleifend option congue nihil imperdiet doming…</p>
-                            </div>
-                            <div class="favroute clearfix">
-                                <p class="pull-md-left">45 Regent Street, London, UK</p>
-                                <ul class="pull-right">
-                                    <li><a href="javascript:void(0)"><i class="icon-video-player"></i></a></li>
-                                    <li><a href="javascript:void(0)"><i class="icon-like"></i></a></li>
-                                    <li><a href="#three" class="share_expender" data-toggle="collapse"><i class="icon-share3"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="toggle_share collapse" id="three">
-                                <ul>
-                                    <li><a href="javascript:void(0)" class="facebook"><i class="icon-facebook-1"></i> Facebook</a></li>
-                                    <li><a href="javascript:void(0)" class="twitter"><i class="icon-twitter-1"></i> Twitter</a></li>
-                                    <li><a href="javascript:void(0)" class="vimo"><i class="icon-vimeo3"></i> Vimeo</a></li>
-                                </ul>
-                            </div>
-                            <div class="property_meta"> <span><i class="icon-select-an-objecto-tool"></i>4800 sq ft</span> <span><i class="icon-bed"></i>3 Bedrooms</span> <span><i class="icon-safety-shower"></i>2 Bedrooms</span> <span><i class="icon-old-television"></i>TV Lounge</span> <span><i class="icon-garage"></i>1 Garage</span> </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="property_item heading_space">
-                        <div class="image"> <a href="#."><img th:src="@{/images/latest4.jpg}" alt="latest property" class="img-responsive"></a> </div>
-                        <div class="price default_clr clearfix bottom20">
-                            <span class="tag pull-left">For Rent</span>
-                            <h4 class="pull-right">$8,600 Per Month - <small>Family Home</small></h4>
-                        </div>
-                        <div class="proerty_content">
-                            <div class="proerty_text">
-                                <h3 class="bottom15"> <a href="#.">Unique Villa With Private Beach</a></h3>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam power nonummy nibh tempor cum soluta nobis eleifend option congue nihil imperdiet doming…</p>
-                            </div>
-                            <div class="favroute clearfix">
-                                <p class="pull-md-left">45 Regent Street, London, UK</p>
-                                <ul class="pull-right">
-                                    <li><a href="javascript:void(0)"><i class="icon-video-player"></i></a></li>
-                                    <li><a href="javascript:void(0)"><i class="icon-like"></i></a></li>
-                                    <li><a href="#four" class="share_expender" data-toggle="collapse"><i class="icon-share3"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="toggle_share collapse" id="eight">
-                                <ul>
-                                    <li><a href="javascript:void(0)" class="facebook"><i class="icon-facebook-1"></i> Facebook</a></li>
-                                    <li><a href="javascript:void(0)" class="twitter"><i class="icon-twitter-1"></i> Twitter</a></li>
-                                    <li><a href="javascript:void(0)" class="vimo"><i class="icon-vimeo3"></i> Vimeo</a></li>
-                                </ul>
-                            </div>
-                            <div class="property_meta"> <span><i class="icon-select-an-objecto-tool"></i>4800 sq ft</span> <span><i class="icon-bed"></i>3 Bedrooms</span> <span><i class="icon-safety-shower"></i>2 Bedrooms</span> <span><i class="icon-old-television"></i>TV Lounge</span> <span><i class="icon-garage"></i>1 Garage</span> </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="col-sm-4">
+            <p>Buy & Rent</p>
+            <p>
+                Text here
+            </p>
+        </div>
+        <div class="col-sm-4">
+            <p>Agent matters</p>
+            <p>Some text</p>
         </div>
     </div>
 </section>
-<!-- Latest Property Ends -->
 <!--Partners-->
 <section id="logos">
     <div class="container partner2 padding">
@@ -777,7 +735,7 @@
             <div class="modal-content">
                 <form class="form-horizontal" method="get">
                     <div class="modal-header" style="background-color: #ebedfe">
-                        <span style="color: #df4905; font-size: 15px"><b>Search</b></span>
+                        <span style="color: #095262; font-size: 15px"><b>Search</b></span>
                     </div>
 
                     <div class="modal-body">
@@ -813,7 +771,7 @@
                         </div>
                     </div>
 
-                    <div class="modal-footer">
+                    <div class="modal-footer" style="background-color: #f1f1ff">
                         <button class="btn btn-default" type="button" onclick="modal.close();">Close</button>
                     </div>
                 </form>
@@ -825,7 +783,7 @@
             <div class="modal-content">
                 <form class="form-horizontal" method="get">
                     <div class="modal-header" style="background-color: #ebedfe">
-                        <span style="color: #df4905; font-size: 15px"><b>Sign in</b></span>
+                        <span style="color: #095262; font-size: 15px"><b>Sign in</b></span>
                     </div>
 
                     <div class="modal-body">
@@ -849,8 +807,8 @@
                         </div>
                     </div>
 
-                    <div class="modal-footer">
-                        <button class="btn btn-default" type="button" onclick="modal.close();">Close</button>
+                    <div class="modal-footer" style="background-color: #f1f1ff">
+                        <button class="btn btn-default" type="button" onclick="loginModal.close();">Close</button>
                     </div>
                 </form>
             </div>
@@ -862,6 +820,11 @@
 </body>
 </html>
 <script>
+    $(document).ready(function () {
+        //$("#search_location").select2();
+
+    })
+
     window.onload = function() {
         var modal = new RModal(document.getElementById('modal'), {
             //content: 'Abracadabra'
@@ -887,10 +850,38 @@
             modal.keydown(ev);
         }, false);
 
+        var loginModal = new RModal(document.getElementById('login_modal'), {
+            //content: 'Abracadabra'
+            beforeOpen: function(next) {
+                console.log('beforeOpen');
+                next();
+            }
+            , afterOpen: function() {
+                console.log('opened');
+            }
+
+            , beforeClose: function(next) {
+                console.log('beforeClose');
+                next();
+            }
+            , afterClose: function() {
+                console.log('closed');
+            }
+
+        });
+
+        document.addEventListener('keydown', function(ev) {
+            loginModal.keydown(ev);
+        }, false);
+
         window.modal = modal;
+        window.loginModal = loginModal;
 
     }
     function showSearchModal(){
         modal.open();
+    }
+    function showLoginModal(){
+        loginModal.open();
     }
 </script>
