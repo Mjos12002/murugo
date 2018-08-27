@@ -1556,7 +1556,7 @@ button{
 }
 .property_item .price .tag, .property_item .price h4{padding: 15px;}
 .property_item .price h4{ color: #fff;}
-.proerty_content .proerty_text{padding:25px 20px;}
+.proerty_content .proerty_text{padding:10px 8px;}
 .proerty_content p{margin:0;}
 .proerty_content .favroute p{
   line-height:44px;
@@ -1564,6 +1564,12 @@ button{
 }
 .proerty_content .favroute p, .proerty_content .favroute ul, .favroute ul li, .property_item .price .tag, .property_item .price h4{
 	display:inline-block;
+}
+.search-option-back {
+    font-size: 18px;
+    padding: 8px;
+    background-color: #474745;
+    color: #e2e2dc
 }
 .proerty_content .favroute ul li a{
   display: block;
@@ -3871,7 +3877,7 @@ footer .footer_panel .media-body span > i{
 	color:#fff;
 }
 .copyright.index2 {
-  background: #0a404b;
+  background: #000000;
   color: #FFFFFF;
 }
 .copyright{
