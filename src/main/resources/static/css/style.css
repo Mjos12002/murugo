@@ -1565,6 +1565,9 @@ button{
 .proerty_content .favroute p, .proerty_content .favroute ul, .favroute ul li, .property_item .price .tag, .property_item .price h4{
 	display:inline-block;
 }
+.description {
+    margin-bottom: 20px;
+}
 .search-option-back {
     font-size: 18px;
     padding: 8px;
@@ -2044,10 +2047,10 @@ i.icon-safety-shower{font-size:16px !important;}
 #property-d-1-2 {
   background-color: #fff;
   position: relative;
-  -moz- transform: translateY(-100%);
-  -ms- transform: translateY(-100%);
-  -o- transform: translateY(-100%);
-  -webkit- transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
 }
 

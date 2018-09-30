@@ -5,35 +5,63 @@ var loadPropertyData = function () {
     if(property_type === 'House'){
         loadHouse();
     }
-    if(property_type === 'Annex'){
+    if(property_type === 'Annex' || property_type === 'Apartment'){
         loadAnnexHouse();
     }
-
-    function loadAnnexHouse(){
-        $.ajax({
-            url : 'annex',
-            method : 'get',
-            success : function (data) {
-                $("#property_type_data").html(data);
-            }, error : function (error, more) {
-                $("#property_type_data").html(error);
-            }
-        });
+    if(property_type === 'Accommodation'){
+        loadAccomodation();
+    }
+    if(property_type === 'commercial'){
+        loadCommercial();
     }
 
-    function loadHouse(){
-        $.ajax({
-            url : 'house',
-            method : 'get',
-            success : function (data) {
-                $("#property_type_data").html(data);
-            }, error : function (error, more) {
-                $("#property_type_data").html(error);
-            }
-        });
-    }
+}
 
+function loadCommercial() {
+    $.ajax({
+        url : 'commercial',
+        method : 'get',
+        success : function (data) {
+            $("#property_type_data").html(data);
+        }, error : function (error, more) {
+            $("#property_type_data").html(error);
+        }
+    });
+}
 
+function loadAnnexHouse(){
+    $.ajax({
+        url : 'annex',
+        method : 'get',
+        success : function (data) {
+            $("#property_type_data").html(data);
+        }, error : function (error, more) {
+            $("#property_type_data").html(error);
+        }
+    });
+}
 
+function loadAccomodation(){
+    $.ajax({
+        url : 'accommodation',
+        method : 'get',
+        success : function (data) {
+            $("#property_type_data").html(data);
+        }, error : function (error, more) {
+            $("#property_type_data").html(error);
+        }
+    });
+}
+
+function loadHouse(){
+    $.ajax({
+        url : 'house',
+        method : 'get',
+        success : function (data) {
+            $("#property_type_data").html(data);
+        }, error : function (error, more) {
+            $("#property_type_data").html(error);
+        }
+    });
 }
 
