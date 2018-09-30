@@ -862,7 +862,7 @@ nav.navbar.bootsnav ul.nav > li > a{
   color:#1f1f1f;
 }
 .white_header nav.navbar.bootsnav ul.nav > li > a{
-	padding: 32px 15px;
+	padding: 20px 15px;
 }
 .white_header nav.navbar.bootsnav.sticked ul.nav > li > a{
 	padding:24px 15px;
@@ -1364,7 +1364,7 @@ button{
 }
 
 .blue_navi{ 
-   background:#e7e7e5;
+   background: #014a8f;
    padding:20px 10px 0 10px;
    position:static;
    color: #000000;
@@ -1568,7 +1568,7 @@ button{
 .search-option-back {
     font-size: 18px;
     padding: 8px;
-    background-color: #474745;
+    background-color: #6291F1;
     color: #e2e2dc
 }
 .proerty_content .favroute ul li a{
@@ -1579,6 +1579,11 @@ button{
   text-align: center;
   width: 48px;
   border-left:1px solid #e5e5e5;
+}
+.offer_title{
+    color: #014A8F;
+    padding: 5px;
+    margin-left: 10px;
 }
 .proerty_content .favroute ul li{
 	width: 48px;

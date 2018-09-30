@@ -10,4 +10,13 @@ public class WebGateway {
     public String index(){
         return "index";
     }
+
+    @RequestMapping("/offer_property")
+    public String offerProperty(){
+        return "offer_property";
+    }
+    @RequestMapping("house")
+    public String house(){
+        return "property_type/house";
+    }
 }
