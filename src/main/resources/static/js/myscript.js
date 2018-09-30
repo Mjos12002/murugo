@@ -11,10 +11,25 @@ var loadPropertyData = function () {
     if(property_type === 'Accommodation'){
         loadAccomodation();
     }
-    if(property_type === 'commercial'){
+    if(property_type === 'Commercial'){
         loadCommercial();
     }
+    if(property_type === 'Land'){
+        loadLand();
+    }
 
+}
+
+function loadLand() {
+    $.ajax({
+        url : 'land',
+        method : 'get',
+        success : function (data) {
+            $("#property_type_data").html(data);
+        }, error : function (error, more) {
+            $("#property_type_data").html(error);
+        }
+    });
 }
 
 function loadCommercial() {

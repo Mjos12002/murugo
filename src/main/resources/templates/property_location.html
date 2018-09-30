@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>Umuhuza | Offer property</title>
+    <title>Umuhuza | Property location</title>
     <div class="" th:replace="includes/styles/index :: principal"></div>
 </head>
 <style>
@@ -75,81 +75,76 @@
     <div class="col-sm-12">
         <form class="callus clearfix border_radius">
             <div class="col-sm-12">
-               <div class="row">
-                   <div class="col-sm-4">
-                       <div class="single-query form-group top10">
-                           <div class="intro">
-                               <select onchange="loadPropertyData()" id="property_type">
-                                   <option selected="" value="any">Type of property</option>
-                                   <option value="House">House</option>
-                                   <option value="Annex">Annex house</option>
-                                   <option value="Apartment">Apartment</option>
-                                   <option value="Accommodation">Accommodation</option>
-                                   <option value="Land">Land</option>
-                                   <option value="Commercial">Commercial</option>
-                                   <option value="Others">Others</option>
-                               </select>
-                           </div>
-                       </div>
-                   </div>
-
-                   <div class="col-sm-4">
-                       <div class="single-query form-group top10">
-                           <div class="intro">
-                               <select>
-                                   <option selected="" value="any">Listing type</option>
-                                   <option>For sale</option>
-                                   <option>For rent</option>
-                                   <option>Both for sale and for rent</option>
-                               </select>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-sm-4">
-                       <div class="col-sm-6">
-                           <div class="single-query form-group top10">
-                               <div class="intro">
-                                   <select>
-                                       <option selected="" value="any">Allowed lease duration</option>
-                                       <option>Any period</option>
-                                       <option>Only long term</option>
-                                       <option>Only short term</option>
-                                   </select>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="col-sm-6">
-                           <div class="single-query form-group top10">
-                               <div class="intro">
-                                   <select>
-                                       <option selected="" value="any">Allowed purchase mode</option>
-                                       <option>Any mode</option>
-                                       <option>By cash</option>
-                                       <option>By bank</option>
-                                       <option>Mortgage</option>
-                                       <option>Rent to buy</option>
-                                   </select>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-            </div>
-            <div class="col-sm-12">
+                <p>
+                    <span class="offer_title">Administrative location</span>
+                </p>
                 <div class="row">
-                    <div class="col-sm-12">
-                        <div class="col-sm-12">
-                            <div class="single-query form-group top10">
-                                <div class="intro">
-                                    <input type="text" class="keyword-input" placeholder="Property name">
-                                </div>
+                    <div class="col-sm-4">
+                        <div class="single-query form-group top10">
+                            <div class="intro">
+                                <select onchange="loadPropertyData()" id="property_type">
+                                    <option selected="" value="any">District</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="single-query form-group top10">
+                            <div class="intro">
+                                <select>
+                                    <option selected="" value="any">Sector</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="single-query form-group top10">
+                            <div class="intro">
+                                <select>
+                                    <option selected="" value="any">Cell</option>
+                                </select>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="property_type_data" class="col-sm-12">
+            <div class="col-sm-12">
+                <p>
+                    <span class="offer_title">Parcel details</span>
+                </p>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="single-query form-group top10">
+                            <div class="intro">
+                                <input type="text" class="keyword-input" placeholder="Parcel ID ">
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="col-sm-4">
+                        <div class="single-query form-group top10">
+                            <div class="intro">
+                                <input type="text" class="keyword-input" placeholder="UPI">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="single-query form-group top10">
+                            <div class="intro">
+                                <input type="text" class="keyword-input" placeholder="Address">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <select>
+                    <option selected="" value="any">Neighborhood</option>
+                </select>
+            </div>
+            <div class="col-sm-12">
+                <p>Map</p>
             </div>
             <div class="col-sm-12">
                 <input type="button" class="btn btn-primary description" value="Next" />

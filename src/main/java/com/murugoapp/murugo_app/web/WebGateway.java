@@ -35,5 +35,21 @@ public class WebGateway {
     public String commercial(){
         return "property_type/commercial";
     }
+    @RequestMapping("property_feature")
+    public String propertyFeature(){
+        return "property_feature";
+    }
+    @RequestMapping("property_location")
+    public String propertyLocation(){
+        return "property_location";
+    }
+    @RequestMapping("contact_info")
+    public String contactInfo(){
+        return "contact_info";
+    }
+    @RequestMapping("property_picture")
+    public String propertyPicture(){
+        return "property_picture";
+    }
 
 }

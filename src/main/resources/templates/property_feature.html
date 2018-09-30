@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Umuhuza | Property features</title>
+    <div class="" th:replace="includes/styles/index :: principal"></div>
+</head>
+<style>
+    .search_options{
+        color: #0a3d48;
+        padding: 20px;
+        font-size: 16px;
+    }
+</style>
+<body>
+<div class="loader">
+    <div class="span">
+        <div class="location_indicator"></div>
+    </div>
+</div>
+<!--Header-->
+<header class="white_header">
+    <div class="topbar white border">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <p></p>
+                </div>
+                <div class="col-md-7 text-right">
+                    <ul class="breadcrumb_top text-right">
+                        <li><a href="submit_property.html" style="color: #0a4a55"><i style="color: #0a3d48" class="icon-icons215"></i>Offer Property</a></li>
+                        <li><a href="login.html" style="color: #0a4a55"><i style="color: #0a3d48" class="icon-icons179"></i>Sign up / Sign in</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-default bootsnav">
+        <div class="container">
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <p style="font-size: 20px">Umuhuza</p>
+            </div>
+            <!-- End Header Navigation -->
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav navbar-right" data-in="fadeIn" data-out="fadeOut" style="margin-right: 40%; background-color: #014a8f">
+                    <li class="dropdown active">
+                        <a href="#." class="dropdown-toggle" data-toggle="dropdown"><span class="search-option-back" style="border-radius: 4px">Offer a property</span></a>
+                    </li>
+                    <li class="dropdown megamenu-fw">
+                        <a href="#" style="color: #FFFFFF" class="dropdown-toggle" data-toggle="dropdown">Sell</a>
+                    </li>
+                    <li class="dropdown megamenu-fw">
+                        <a href="#" style="color: #FFFFFF" class="dropdown-toggle" data-toggle="dropdown">Book</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!--Header Ends-->
+<div class="blue_navi">
+    <div class="container">
+
+    </div>
+</div>
+<!--Slider-->
+
+<div class="row">
+    <div class="col-sm-12">
+        <form class="callus clearfix border_radius">
+            <div class="col-sm-12">
+                <p>
+                    <span class="offer_title">Utilities included in price</span>
+                </p>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="single-query form-group top10">
+                            <div class="intro">
+                                <div>
+                                    <input type="checkbox"> Security
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Water
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Electricity
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="single-query form-group top10">
+                            <div class="intro">
+                                <div>
+                                    <input type="checkbox"> Internet (WIFI)
+                                </div>
+                                <div>
+                                    <input type="checkbox"> TV subscription
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Cleaning services
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="single-query form-group top10">
+                            <div class="intro">
+                                <div>
+                                    <input type="checkbox"> Water collection bill
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Waste collection bill
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Laundry service
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <p>
+                    <span class="offer_title">Accessibility and view</span>
+                </p>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="single-query form-group top10">
+                            <div class="intro">
+                                <div>
+                                    <input type="checkbox"> Asphalt road
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Unpaved road
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Paved road
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="single-query form-group top10">
+                            <div class="intro">
+                                <div>
+                                    <input type="checkbox"> High class neighbourhood
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Developed area
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Alongside slams
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="single-query form-group top10">
+                            <div class="intro">
+                                <div>
+                                    <input type="checkbox"> City view
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Water view
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Mountain view
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <p>
+                    <span class="offer_title">Amenities</span>
+                </p>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="single-query form-group top10">
+                            <div class="intro">
+                                Indoor
+                                <div>
+                                    <input type="checkbox"> Hot water
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Air conditioning
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Lift
+                                </div>
+                                Outdoor
+                                <div>
+                                    <input type="checkbox"> Swimming pool
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Balcony
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Terrace
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="single-query form-group top10">
+                            <div class="intro">
+                                Indoor
+                                <div>
+                                    <input type="checkbox"> Washing machine
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Water tank
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Generator
+                                </div>
+                                Outdoor
+                                <div>
+                                    <input type="checkbox"> Fully fenced
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Covered parking
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Garage
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="single-query form-group top10">
+                            <div class="intro">
+                                <p>Indoor</p>
+                                <div>
+                                    <input type="checkbox"> Dish washer
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Extinguisher
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Smoke detector
+                                </div>
+                                Outdoor
+                                <div>
+                                    <input type="checkbox"> Entertaining area
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Beach yard
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Vegetable garden
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <p>
+                    <span class="offer_title">Kitchen and Dinning</span>
+                </p>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="single-query form-group top10">
+                            <div class="intro">
+                                <div>
+                                    <input type="checkbox"> Stove
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Fridge
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Microwave
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="single-query form-group top10">
+                            <div class="intro">
+                                <div>
+                                    <input type="checkbox"> Pots
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Dishes
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Plate
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="single-query form-group top10">
+                            <div class="intro">
+                                <div>
+                                    <input type="checkbox"> Water dispenser
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Glasses
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Cups
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <p>
+                    <span class="offer_title">Bedroom and bath rooms</span>
+                </p>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="single-query form-group top10">
+                            <div class="intro">
+                                <div>
+                                    <input type="checkbox"> Wardrobes
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Beds
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Matelas
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="single-query form-group top10">
+                            <div class="intro">
+                                <div>
+                                    <input type="checkbox"> Hangers
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Towels
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Slippers
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="single-query form-group top10">
+                            <div class="intro">
+                                <div>
+                                    <input type="checkbox"> Iron
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Shampoo
+                                </div>
+                                <div>
+                                    <input type="checkbox"> Hair dry
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="property_type_data" class="col-sm-12">
+
+            </div>
+            <div class="col-sm-12">
+                <input type="button" class="btn btn-primary description" value="Next" />
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<!--Partner Ends-->
+<!--Footer-->
+<footer class="padding_top footer2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="footer_panel bottom30">
+                    <h4 class="bottom30">Sales</h4>
+                    <ul class="area_search">
+                        <li><a href="javascript:void(0)">Houses</a></li>
+                        <li class="active"><a href="javascript:void(0)">Apartments</a></li>
+                        <li><a href="javascript:void(0)">Land</a></li>
+                        <li><a href="javascript:void(0)">Offices</a></li>
+                        <li><a href="javascript:void(0)">Shops</a></li>
+                        <li><a href="javascript:void(0)">Warehouse</a></li>
+                        <li><a href="javascript:void(0)">Bars / Restaurants</a></li>
+                        <li><a href="javascript:void(0)">Hotel</a></li>
+                        <li><a href="javascript:void(0)">Leisure</a></li>
+                        <li><a href="javascript:void(0)">Medical</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="footer_panel bottom30">
+                    <h4 class="bottom30">Rentals</h4>
+                    <ul class="area_search">
+                        <li><a href="javascript:void(0)">Houses<i class="icon-icons74"></i></a></li>
+                        <li class="active"><a href="javascript:void(0)">Apartments</a></li>
+                        <li><a href="javascript:void(0)">Offices</a></li>
+                        <li><a href="javascript:void(0)">Hotel</a></li>
+                        <li><a href="javascript:void(0)">Shops</a></li>
+                        <li><a href="javascript:void(0)">Warehouse</a></li>
+                        <li><a href="javascript:void(0)">Leisure</a></li>
+                        <li><a href="javascript:void(0)">Medical</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="footer_panel bottom30">
+                    <h4 class="bottom30">Real estate consultancy</h4>
+                    <ul class="area_search">
+                        <li><a href="javascript:void(0)">Agency / Brokerage</a></li>
+                        <li class="active"><a href="#">Property management</a></li>
+                        <li><a href="javascript:void(0)">Property valuation</a></li>
+                        <li><a href="javascript:void(0)">Land vs master plan advisory</a></li>
+                        <li><a href="javascript:void(0)">Real estate development</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="footer_panel bottom30">
+                    <h4 class="bottom30">Civil engineering consultancy</h4>
+                    <ul class="area_search">
+                        <li><a href="javascript:void(0)">Construction project study</a></li>
+                        <li class="active"><a href="javascript:void(0)">Construction supervision</a></li>
+                        <li><a href="javascript:void(0)">Construction management</a></li>
+                        <li><a href="javascript:void(0)">Application of construction permit</a></li>
+                        <li><a href="javascript:void(0)">Topography, GIS & Mapping</a></li>
+                        <li><a href="javascript:void(0)">Medical</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<section>
+    <div class="row" style="background-color: #082b34; padding: 10px">
+        <div class="col-sm-2" style="text-align: center">
+            <a href="#." style="color: #FFFFFF" class="dropdown-toggle" data-toggle="dropdown">About</a>
+        </div>
+        <div class="col-sm-2" style="text-align: center">
+            <a href="#"style="color: #FFFFFF" class="dropdown-toggle" data-toggle="dropdown">Contact</a>
+        </div>
+        <div class="col-sm-2" style="text-align: center">
+            <a href="#" style="color: #FFFFFF" class="dropdown-toggle" data-toggle="dropdown">Popular search</a>
+        </div>
+        <div class="col-sm-2" style="text-align: center">
+            <a href="#" style="color: #FFFFFF" class="dropdown-toggle" data-toggle="dropdown">FAQs</a>
+        </div>
+        <div class="col-sm-2" style="text-align: center">
+            <a href="#" style="color: #FFFFFF" class="dropdown-toggle" data-toggle="dropdown">Services</a>
+        </div>
+        <div class="col-sm-2" style="text-align: center">
+            <a href="#" style="color: #FFFFFF" class="dropdown-toggle" data-toggle="dropdown">Advertise</a>
+        </div>
+    </div>
+</section>
+<!--CopyRight-->
+<div class="copyright index2">
+    <div class="copyright_inner">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-7">
+                    <p>Copyright &copy; 2018 <span>Mu rugo</span>. All rights reserved.</p>
+                </div>
+                <div class="col-md-5 text-right">
+                    <p>Designed by <a href="javascript:void(0)">Joseph MANZI</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<div class="" th:replace="includes/scripts/index :: principal"></div>
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        //$("#search_location").select2();
+
+    })
+
+    window.onload = function() {
+        var modal = new RModal(document.getElementById('modal'), {
+            //content: 'Abracadabra'
+            beforeOpen: function(next) {
+                console.log('beforeOpen');
+                next();
+            }
+            , afterOpen: function() {
+                console.log('opened');
+            }
+
+            , beforeClose: function(next) {
+                console.log('beforeClose');
+                next();
+            }
+            , afterClose: function() {
+                console.log('closed');
+            }
+
+        });
+
+        document.addEventListener('keydown', function(ev) {
+            modal.keydown(ev);
+        }, false);
+
+        var loginModal = new RModal(document.getElementById('login_modal'), {
+            //content: 'Abracadabra'
+            beforeOpen: function(next) {
+                console.log('beforeOpen');
+                next();
+            }
+            , afterOpen: function() {
+                console.log('opened');
+            }
+
+            , beforeClose: function(next) {
+                console.log('beforeClose');
+                next();
+            }
+            , afterClose: function() {
+                console.log('closed');
+            }
+
+        });
+
+        document.addEventListener('keydown', function(ev) {
+            loginModal.keydown(ev);
+        }, false);
+
+        window.modal = modal;
+        window.loginModal = loginModal;
+
+    }
+    function showSearchModal(){
+        modal.open();
+    }
+    function showLoginModal(){
+        loginModal.open();
+    }
+</script>
