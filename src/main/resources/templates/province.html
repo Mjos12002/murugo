@@ -31,10 +31,10 @@
                 <div class="col-md-7 text-right">
                     <ul class="breadcrumb_top text-right">
                         <li><a href="offer_property" style="color: #0a4a55"><i style="color: #0a3d48" class="icon-icons215"></i>Offer Property</a></li>
-                        <li><a href="district" style="color: #0a4a55"><i style="color: #0a3d48" class="icon-icons179"></i>District</a></li>
-                        <li><a href="sector" style="color: #0a4a55"><i style="color: #0a3d48" class="icon-icons179"></i>Sector</a></li>
-                        <li><a href="cell" style="color: #0a4a55"><i style="color: #0a3d48" class="icon-icons179"></i>Cell</a></li>
-                        <li><a href="popular_location" style="color: #0a4a55"><i style="color: #0a3d48" class="icon-icons179"></i>Popular location</a></li>
+                        <li><a href="district" style="color: #0a4a55"><i style="color: #0a3d48"></i>District</a></li>
+                        <li><a href="sector" style="color: #0a4a55"><i style="color: #0a3d48"></i>Sector</a></li>
+                        <li><a href="cell" style="color: #0a4a55"><i style="color: #0a3d48"></i>Cell</a></li>
+                        <li><a href="popular_location" style="color: #0a4a55"><i style="color: #0a3d48"></i>Popular location</a></li>
                     </ul>
                 </div>
             </div>
@@ -55,12 +55,6 @@
                     <li class="dropdown active">
                         <a href="#." class="dropdown-toggle" data-toggle="dropdown"><span class="search-option-back" style="border-radius: 4px">Add province</span></a>
                     </li>
-                    <li class="dropdown megamenu-fw">
-                        <a href="#" style="color: #FFFFFF" class="dropdown-toggle" data-toggle="dropdown">Sell</a>
-                    </li>
-                    <li class="dropdown megamenu-fw">
-                        <a href="#" style="color: #FFFFFF" class="dropdown-toggle" data-toggle="dropdown">Book</a>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -79,27 +73,32 @@
         <form class="callus clearfix border_radius">
             <div class="col-sm-12">
                 <p>
-                    <span class="offer_title">Administrative location / Add province</span>
+                    <span class="location_title">Administrative location / Add province</span>
+                </p>
+                <p>
+                    <span id="server_response"></span>
                 </p>
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-12">
                         <div class="single-query form-group top10">
                             <div class="intro">
                                 <input type="text" id="province_name" placeholder="Province name" class="" />
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-12">
                         <div class="single-query form-group top10">
                             <div class="intro">
-                                <input type="button" class="btn btn-principal" onclick="addProvince()" value="Save" />
+                                <input type="button" class="btn btn-success" onclick="addProvince()" value="Save" />
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
 
         </form>
+
     </div>
 </div>
 

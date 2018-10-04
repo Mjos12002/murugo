@@ -2054,9 +2054,19 @@ i.icon-safety-shower{font-size:16px !important;}
   transform: translateY(-100%);
 }
 
+.location_title {
+    font-size: 20px;
+    color: #0f3e68;
+    padding: 20px;
+}
+
 .search_modal{
     width: 100%;
     padding: 10px;
+}
+#server_response {
+    padding: 20px;
+    font-size: 17px;
 }
 
 #property-d-1-2.space{ padding-left:10px; padding-right:10px;}

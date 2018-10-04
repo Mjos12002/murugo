@@ -78,17 +78,20 @@
                 <p>
                     <span class="offer_title">Administrative location / Add district</span>
                 </p>
+                <p>
+                    <span id="server_response"></span>
+                </p>
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-12">
                         <div class="single-query form-group top10">
                             <div class="intro">
                                 <input type="text" id="sector_name" placeholder="Sector name" class="keyword-input" />
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-12">
                         <div class="single-query form-group top10">
-                            <div class="intro">
+                            <div>
                                 <select id="district_id">
                                     <option selected="" value="any">district</option>
                                 </select>
@@ -98,10 +101,11 @@
                     <div class="col-sm-4">
                         <div class="single-query form-group top10">
                             <div class="intro">
-                                <input type="button" class="btn btn-principal" onclick="addSector()" value="Save" />
+                                <input type="button" class="btn btn-success" onclick="addSector()" value="Save" />
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
 
@@ -220,7 +224,8 @@
 </html>
 <script>
     $(document).ready(function () {
-        //$("#search_location").select2();
+        $("#district_id").select2();
+        loadDistrict();
 
     })
 

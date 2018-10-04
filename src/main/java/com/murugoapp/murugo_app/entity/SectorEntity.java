@@ -2,12 +2,21 @@ package com.murugoapp.murugo_app.entity;
 
 public class SectorEntity {
 
+    int id;
     int districtID;
     String sectorName;
 
-    public SectorEntity(int districtID, String sectorName) {
+    public SectorEntity(int id, int districtID, String sectorName) {
         this.districtID = districtID;
         this.sectorName = sectorName;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getDistrictID() {

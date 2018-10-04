@@ -76,32 +76,36 @@
         <form class="callus clearfix border_radius">
             <div class="col-sm-12">
                 <p>
-                    <span class="offer_title">Administrative location / Add district</span>
+                    <span class="location_title">Administrative location / Add district</span>
+                </p>
+                <p>
+                    <span id="server_response"></span>
                 </p>
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-12">
                         <div class="single-query form-group top10">
                             <div class="intro">
                                 <input type="text" id="district_name" placeholder="District name" class="keyword-input" />
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-12">
                     <div class="single-query form-group top10">
-                        <div class="intro">
+                        <div>
                             <select id="province_id">
                                 <option selected="" value="any">Province</option>
                             </select>
                         </div>
                     </div>
-                </div>
-                    <div class="col-sm-4">
+                    </div>
+                    <div class="col-sm-12">
                         <div class="single-query form-group top10">
                             <div class="intro">
-                                <input type="button" class="btn btn-principal" onclick="addDistrict()" value="Save" />
+                                <input type="button" class="btn btn-success" onclick="addDistrict()" value="Save" />
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
 
@@ -220,8 +224,8 @@
 </html>
 <script>
     $(document).ready(function () {
-        //$("#search_location").select2();
-
+        $("#province_id").select2();
+        loadProvince();
     })
 
     window.onload = function() {

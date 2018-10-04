@@ -79,14 +79,14 @@
                     <span class="offer_title">Administrative location / Add neighborhood</span>
                 </p>
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-12">
                         <div class="single-query form-group top10">
                             <div class="intro">
                                 <input type="text" id="location_name" placeholder="Neighborhood name" class="keyword-input" />
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-12">
                         <div class="single-query form-group top10">
                             <div class="intro">
                                 <select id="cell_id">
@@ -95,12 +95,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-12">
                         <div class="single-query form-group top10">
                             <div class="intro">
                                 <input type="button" class="btn btn-principal" onclick="addLocation()" value="Save" />
                             </div>
                         </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <span id="server_response"></span>
                     </div>
                 </div>
             </div>
@@ -220,8 +223,8 @@
 </html>
 <script>
     $(document).ready(function () {
-        //$("#search_location").select2();
-
+        $("#cell_id").select2();
+        loadCell();
     })
 
     window.onload = function() {

@@ -1,13 +1,23 @@
 package com.murugoapp.murugo_app.entity;
 
-public class popularLocationEntity {
+public class PopularLocationEntity {
 
+    int id;
     int cellID;
     String entityName;
 
-    public popularLocationEntity(int cellID, String entityName) {
+    public PopularLocationEntity(int id, int cellID, String entityName) {
+        this.id = id;
         this.cellID = cellID;
         this.entityName = entityName;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getCellID() {

@@ -2,12 +2,22 @@ package com.murugoapp.murugo_app.entity;
 
 public class CellEntity {
 
+    int id;
     int sectorID;
-    String sectorName;
+    String cellName;
 
-    public CellEntity(int sectorID, String sectorName) {
+    public CellEntity(int id, int sectorID, String cellName) {
+        this.id = id;
         this.sectorID = sectorID;
-        this.sectorName = sectorName;
+        this.cellName = cellName;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getSectorID() {
@@ -18,11 +28,11 @@ public class CellEntity {
         this.sectorID = sectorID;
     }
 
-    public String getSectorName() {
-        return sectorName;
+    public String getCellName() {
+        return cellName;
     }
 
-    public void setSectorName(String sectorName) {
-        this.sectorName = sectorName;
+    public void setCellName(String cellName) {
+        this.cellName = cellName;
     }
 }
