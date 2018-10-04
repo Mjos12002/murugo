@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>Umuhuza | Property location</title>
+    <title>Umuhuza | Sector</title>
     <div class="" th:replace="includes/styles/index :: principal"></div>
 </head>
 <style>
@@ -50,7 +50,7 @@
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav navbar-right" data-in="fadeIn" data-out="fadeOut" style="margin-right: 40%; background-color: #014a8f">
                     <li class="dropdown active">
-                        <a href="#." class="dropdown-toggle" data-toggle="dropdown"><span class="search-option-back" style="border-radius: 4px">Offer a property</span></a>
+                        <a href="#." class="dropdown-toggle" data-toggle="dropdown"><span class="search-option-back" style="border-radius: 4px">Add sector</span></a>
                     </li>
                     <li class="dropdown megamenu-fw">
                         <a href="#" style="color: #FFFFFF" class="dropdown-toggle" data-toggle="dropdown">Sell</a>
@@ -76,50 +76,33 @@
         <form class="callus clearfix border_radius">
             <div class="col-sm-12">
                 <p>
-                    <span class="offer_title">Identification</span>
+                    <span class="offer_title">Administrative location / Add district</span>
                 </p>
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="single-query form-group top10">
                             <div class="intro">
-                                <input type="text" class="keyword-input" placeholder="Names">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <div class="single-query form-group top10">
-                            <div class="intro">
-                                <input type="text" class="keyword-input" placeholder="Email">
+                                <input type="text" id="sector_name" placeholder="Sector name" class="keyword-input" />
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="single-query form-group top10">
                             <div class="intro">
-                                <input type="text" class="keyword-input" placeholder="Telephone">
+                                <select id="district_id">
+                                    <option selected="" value="any">district</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="single-query form-group top10">
+                            <div class="intro">
+                                <input type="button" class="btn btn-principal" onclick="addSector()" value="Save" />
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-12">
-                <p>Verify phone number</p>
-                <p>
-                    <input type="checkbox"> Via SMS
-                </p>
-                <p>
-                    <input type="checkbox"> Via Email
-                </p>
-            </div>
-            <div class="col-sm-12">
-                <p>Upload management file</p>
-            </div>
-            <div class="col-sm-12">
-                <p>Map</p>
-            </div>
-            <div class="col-sm-12 description">
-                <a href="property_picture" class="btn btn-principal">Next</a>
             </div>
 
         </form>

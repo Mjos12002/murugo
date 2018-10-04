@@ -51,5 +51,25 @@ public class WebGateway {
     public String propertyPicture(){
         return "property_picture";
     }
+    @RequestMapping("province")
+    public String province(){
+        return "province";
+    }
+    @RequestMapping("district")
+    public String district(){
+        return "district";
+    }
+    @RequestMapping("sector")
+    public String sector() {
+        return "sector";
+    }
+    @RequestMapping("cell")
+    public String cell(){
+        return "cell";
+    }
+    @RequestMapping("popular_location")
+    public String popular_location(){
+        return "popular_location";
+    }
 
 }
