@@ -69,11 +69,11 @@
 <!--Slider-->
 
 <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-6">
         <form class="callus clearfix border_radius">
             <div class="col-sm-12">
                 <p>
-                    <span class="location_title">Administrative location / Add province</span>
+                    <span class="location_title">Add province</span>
                 </p>
                 <p>
                     <span id="server_response"></span>
@@ -96,8 +96,10 @@
 
                 </div>
             </div>
-
         </form>
+
+    </div>
+    <div class="col-sm-6" id="province_data">
 
     </div>
 </div>
@@ -213,8 +215,7 @@
 </html>
 <script>
     $(document).ready(function () {
-        //$("#search_location").select2();
-
+        loadProvinceData();
     })
 
     window.onload = function() {

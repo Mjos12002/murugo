@@ -814,7 +814,7 @@ nav.navbar.bootsnav{
 .layout_dark nav.navbar.bootsnav, 
 .layout_default nav.navbar.bootsnav, 
 .layout_boxed nav.navbar.bootsnav{
-  background-color: #293443;
+  background-color: #014A8F;
 }
 .white_header nav.navbar.bootsnav {
   background-color: #fff;
@@ -2066,10 +2066,18 @@ i.icon-safety-shower{font-size:16px !important;}
     padding: 10px;
 }
 
+.offer_row {
+    border-bottom: 1px solid #e1e1df;
+}
+
 .location_title {
     font-size: 20px;
     color: #0f3e68;
     padding: 20px;
+}
+
+#available_data {
+    border-left: 1px solid #f4f4f2;
 }
 
 .search_modal{

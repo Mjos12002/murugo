@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>Umuhuza | Sector</title>
+    <title>Umuhuza | Province</title>
     <div class="" th:replace="includes/styles/index :: principal"></div>
 </head>
 <style>
@@ -21,59 +21,68 @@
     </div>
 </div>
 <!--Header-->
-<header class="white_header">
-    <div class="topbar white border">
+<header class="layout_default">
+    <div class="topbar grey">
         <div class="container">
             <div class="row">
                 <div class="col-md-5">
-                    <p></p>
+
                 </div>
                 <div class="col-md-7 text-right">
                     <ul class="breadcrumb_top text-right">
-                        <li><a href="property_data" style="color: #0a4a55"><i style="color: #0a3d48" class="fa fa-property"></i>Property data</a></li>
-                        <li><a href="district" style="color: #0a4a55"><i style="color: #0a3d48"></i>District</a></li>
-                        <li><a href="sector" style="color: #0a4a55"><i style="color: #0a3d48"></i>Sector</a></li>
-                        <li><a href="cell" style="color: #0a4a55"><i style="color: #0a3d48"></i>Cell</a></li>
-                        <li><a href="popular_location" style="color: #0a4a55"><i style="color: #0a3d48"></i>Popular location</a></li>
+                        <li><a href="/"><i class="icon-icons179"></i>Logout</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-default bootsnav">
+    <div class="header-upper">
         <div class="container">
-            <!-- Start Header Navigation -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <p style="font-size: 20px">Umuhuza</p>
+            <div class="row">
+                <div class="col-md-3 col-sm-12">
+                    <div class="logo"><a href="#" style="font-size: 25px">Umuhuza</a></div>
+                </div>
+                <!--Info Box-->
+                <div class="col-md-9 col-sm-12 right">
+
+                </div>
             </div>
-            <!-- End Header Navigation -->
-            <div class="collapse navbar-collapse" id="navbar-menu">
-                <ul class="nav navbar-nav navbar-right" data-in="fadeIn" data-out="fadeOut" style="margin-right: 40%; background-color: #014a8f">
-                    <li class="dropdown active">
-                        <a href="#." class="dropdown-toggle" data-toggle="dropdown"><span class="search-option-back" style="border-radius: 4px">Administrative location</span></a>
-                    </li>
-                </ul>
+        </div>
+    </div>
+    <nav class="navbar navbar-default navbar-sticky bootsnav">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Start Header Navigation -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <a class="navbar-brand sticky_logo" href="/">Umuhuza</a>
+                    </div> <!-- End Header Navigation -->
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+                        <ul class="nav navbar-nav" data-in="fadeIn" data-out="fadeOut">
+                            <li class="dropdown">
+                                <a href="#." class="dropdown-toggle" data-toggle="dropdown">Property</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="property_data">Property type</a></li>
+                                    <li><a href="listing_type">Listing type</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
 </header>
 <!--Header Ends-->
-<div class="blue_navi">
-    <div class="container">
-
-    </div>
-</div>
-<!--Slider-->
-
 <div class="row">
     <div class="col-sm-6">
         <form class="callus clearfix border_radius">
             <div class="col-sm-12">
                 <p>
-                    <span class="location_title">Add cell</span>
+                    <span class="location_title">Listing type</span>
                 </p>
                 <p>
                     <span id="server_response"></span>
@@ -82,23 +91,14 @@
                     <div class="col-sm-12">
                         <div class="single-query form-group top10">
                             <div class="intro">
-                                <input type="text" id="cell_name" placeholder="Cell name" class="keyword-input" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="single-query form-group top10">
-                            <div>
-                                <select id="sector_id">
-                                    <option selected="" value="any">Sector</option>
-                                </select>
+                                <input type="text" id="listing_type_name" placeholder="Listing type" class="" />
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-12">
                         <div class="single-query form-group top10">
                             <div class="intro">
-                                <input type="button" class="btn btn-success" onclick="addCell()" value="Save" />
+                                <input type="button" class="btn btn-success" onclick="addListingType()" value="Save" />
                             </div>
                         </div>
                     </div>
@@ -108,7 +108,7 @@
 
         </form>
     </div>
-    <div class="col-sm-6" id="available_data"></div>
+    <div id="available_data" class="col-sm-6"></div>
 </div>
 
 <!--Partner Ends-->
@@ -222,9 +222,7 @@
 </html>
 <script>
     $(document).ready(function () {
-        $("#sector_id").select2();
-        loadSector();
-        loadCellData();
+        loadListingTypeData();
     })
 
     window.onload = function() {

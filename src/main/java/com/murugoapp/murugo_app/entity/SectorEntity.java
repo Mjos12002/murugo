@@ -7,6 +7,7 @@ public class SectorEntity {
     String sectorName;
 
     public SectorEntity(int id, int districtID, String sectorName) {
+        this.id = id;
         this.districtID = districtID;
         this.sectorName = sectorName;
     }

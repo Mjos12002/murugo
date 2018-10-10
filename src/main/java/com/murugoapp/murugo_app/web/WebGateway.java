@@ -78,4 +78,15 @@ public class WebGateway {
     public String login(){
         return "login";
     }
+    @RequestMapping("property_data")
+    public String propertyData(){
+        return "property_data";
+    }
+    @RequestMapping("listing_type")
+    public String listingType(){return "listing_type";}
+    @RequestMapping("sign_up")
+    public String signUp(){
+        return "sign_up";
+    }
+
 }

@@ -3,6 +3,7 @@ package com.murugoapp.murugo_app.api;
 import com.murugoapp.murugo_app.entity.*;
 import com.murugoapp.murugo_app.model.*;
 import com.murugoapp.murugo_app.utility.GenericServerResponse;
+import com.sun.corba.se.spi.legacy.connection.GetEndPointInfoAgainException;
 import org.omg.CORBA.PUBLIC_MEMBER;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -31,6 +32,11 @@ public class ApiCall {
     LocationModel locationModel;
     @Autowired
     CellModel cellModel;
+    @Autowired
+    PropertyTypeModel propertyTypeModel;
+    @Autowired
+    ListingTypeModel listingTypeModel;
+
 
     @RequestMapping(value = "/addProvince", method = RequestMethod.POST, produces = "application/json")
     public GenericServerResponse addProvince(@ModelAttribute ProvinceEntity provinceEntity){
@@ -57,6 +63,11 @@ public class ApiCall {
         return  genericServerResponse;
     }
 
+    @RequestMapping(value = "get_all_popular_location", produces = "application/json")
+    public List<PopularLocationEntity> getAllPopularLocation(){
+        return locationModel.getAllLocation();
+    }
+
     @RequestMapping(value = "/get_all_province", produces = "application/json")
     public List<ProvinceEntity> getAllProvince(){
         return provinceModel.getAllProvince();
@@ -65,6 +76,26 @@ public class ApiCall {
     @RequestMapping(value = "/add_district", produces = "application/json")
     public GenericServerResponse addDistrict(@ModelAttribute DistrictEntity districtEntity){
         return districtModel.addProvince(districtEntity);
+    }
+
+    @RequestMapping(value = "add_property_type", produces = "application/json")
+    public GenericServerResponse addPropertyType(@ModelAttribute PropertyTypeEntity propertyTypeEntity){
+        return propertyTypeModel.addPropertyType(propertyTypeEntity);
+    }
+
+    @RequestMapping(value = "add_listing_type", produces = "application/json")
+    public GenericServerResponse addListingType(@ModelAttribute ListingTypeEntity listingTypeEntity){
+        return listingTypeModel.addListingType(listingTypeEntity);
+    }
+
+    @RequestMapping(value = "get_all_listing_type", produces = "application/json")
+    public List<ListingTypeEntity> getAllListingType(){
+        return listingTypeModel.getAllListingType();
+    }
+
+    @RequestMapping(value = "get_all_property_type", produces = "application/json")
+    public List<PropertyTypeEntity> getAllPropertyType(){
+        return propertyTypeModel.getAllPropertyType();
     }
 
     @RequestMapping(value = "/get_all_district", produces = "application/json")

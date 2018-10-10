@@ -30,8 +30,11 @@
                 </div>
                 <div class="col-md-7 text-right">
                     <ul class="breadcrumb_top text-right">
-                        <li><a href="submit_property.html" style="color: #0a4a55"><i style="color: #0a3d48" class="icon-icons215"></i>Offer Property</a></li>
-                        <li><a href="login.html" style="color: #0a4a55"><i style="color: #0a3d48" class="icon-icons179"></i>Sign up / Sign in</a></li>
+                        <li><a href="property_data" style="color: #0a4a55"><i style="color: #0a3d48" class="fa fa-property"></i>Property data</a></li>
+                        <li><a href="district" style="color: #0a4a55"><i style="color: #0a3d48"></i>District</a></li>
+                        <li><a href="sector" style="color: #0a4a55"><i style="color: #0a3d48"></i>Sector</a></li>
+                        <li><a href="cell" style="color: #0a4a55"><i style="color: #0a3d48"></i>Cell</a></li>
+                        <li><a href="popular_location" style="color: #0a4a55"><i style="color: #0a3d48"></i>Popular location</a></li>
                     </ul>
                 </div>
             </div>
@@ -50,13 +53,7 @@
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav navbar-right" data-in="fadeIn" data-out="fadeOut" style="margin-right: 40%; background-color: #014a8f">
                     <li class="dropdown active">
-                        <a href="#." class="dropdown-toggle" data-toggle="dropdown"><span class="search-option-back" style="border-radius: 4px">Add district</span></a>
-                    </li>
-                    <li class="dropdown megamenu-fw">
-                        <a href="#" style="color: #FFFFFF" class="dropdown-toggle" data-toggle="dropdown">Sell</a>
-                    </li>
-                    <li class="dropdown megamenu-fw">
-                        <a href="#" style="color: #FFFFFF" class="dropdown-toggle" data-toggle="dropdown">Book</a>
+                        <a href="#." class="dropdown-toggle" data-toggle="dropdown"><span class="search-option-back" style="border-radius: 4px">Administration location</span></a>
                     </li>
                 </ul>
             </div>
@@ -72,11 +69,11 @@
 <!--Slider-->
 
 <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-6">
         <form class="callus clearfix border_radius">
             <div class="col-sm-12">
                 <p>
-                    <span class="location_title">Administrative location / Add district</span>
+                    <span class="location_title">Add district</span>
                 </p>
                 <p>
                     <span id="server_response"></span>
@@ -111,6 +108,7 @@
 
         </form>
     </div>
+    <div class="col-sm-6" id="available_data"></div>
 </div>
 
 <!--Partner Ends-->
@@ -226,6 +224,7 @@
     $(document).ready(function () {
         $("#province_id").select2();
         loadProvince();
+        loadDistrictData();
     })
 
     window.onload = function() {
