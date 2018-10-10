@@ -10,7 +10,6 @@ public class WebGateway {
     public String index(){
         return "index";
     }
-
     @RequestMapping("/offer_property")
     public String offerProperty(){
         return "offer_property";
@@ -71,5 +70,12 @@ public class WebGateway {
     public String popular_location(){
         return "popular_location";
     }
-
+    @RequestMapping("admin")
+    public String admin(){
+        return "administrator";
+    }
+    @RequestMapping("login")
+    public String login(){
+        return "login";
+    }
 }
