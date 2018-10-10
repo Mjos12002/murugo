@@ -33,7 +33,7 @@ public class CellModel {
                     java.sql.PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
                     preparedStatement.setString(1, null);
                     preparedStatement.setInt(2, cellEntity.getSectorID());
-                    preparedStatement.setString(3, cellEntity.getSectorName());
+                    preparedStatement.setString(3, cellEntity.getCellName());
                     return preparedStatement;
                 }
             }, keyHolder);
@@ -51,7 +51,7 @@ public class CellModel {
         try {
             result = jdbcTemplate.query(
 
-                    "SELECT id, cell_name, sector_id FROM sector ORDER BY cell_name DESC",
+                    "SELECT id, cell_name, sector_id FROM cell ORDER BY cell_name DESC",
                     (rs, rowNum) -> new CellEntity(rs.getInt("id"), rs.getInt("sector_id"), rs.getString("cell_name"))
 //                    new Object[]{String.valueOf(from), String.valueOf(to)}
             );

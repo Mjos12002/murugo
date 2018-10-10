@@ -4,12 +4,12 @@ public class PopularLocationEntity {
 
     int id;
     int cellID;
-    String entityName;
+    String locationName;
 
-    public PopularLocationEntity(int id, int cellID, String entityName) {
+    public PopularLocationEntity(int id, int cellID, String locationName) {
         this.id = id;
         this.cellID = cellID;
-        this.entityName = entityName;
+        this.locationName = locationName;
     }
 
     public int getId() {
@@ -28,11 +28,11 @@ public class PopularLocationEntity {
         this.cellID = cellID;
     }
 
-    public String getEntityName() {
-        return entityName;
+    public String getLocationName() {
+        return locationName;
     }
 
-    public void setEntityName(String entityName) {
-        this.entityName = entityName;
+    public void getLocationName(String locationName) {
+        this.locationName = locationName;
     }
 }

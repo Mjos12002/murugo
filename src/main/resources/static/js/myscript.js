@@ -226,6 +226,7 @@ var addCell = function () {
 var addLocation = function () {
     var location_name = $("#location_name").val();
     var cell_id = $("#cell_id").val();
+    alert(location_name + " -- " + cell_id);
     $.ajax({
         url : "api/add_location",
         method : "post",

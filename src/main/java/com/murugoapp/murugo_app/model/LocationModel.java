@@ -32,7 +32,7 @@ public class LocationModel {
                     java.sql.PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
                     preparedStatement.setString(1, null);
                     preparedStatement.setInt(2, popularLocationEntity.getCellID());
-                    preparedStatement.setString(3, popularLocationEntity.getEntityName());
+                    preparedStatement.setString(3, popularLocationEntity.getLocationName());
                     return preparedStatement;
                 }
             }, keyHolder);
