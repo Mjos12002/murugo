@@ -490,6 +490,34 @@ var addPropertyType = () => {
 
 }
 
+var loadPropertyTypes = () => {
+    $.ajax({
+        url : "api/get_all_property_type",
+        method : "GET",
+        success : function (result) {
+            $.each(result, function (k, v) {
+                $("#property_type").append(`<option value="${this.propertyTypeName}">${this.propertyTypeName}</option>`);
+            })
+        }, error : function (error, code) {
+            alert(error);
+        }
+    })
+}
+
+var loadListingTypes = () => {
+    $.ajax({
+        url : "api/get_all_listing_type",
+        method : "GET",
+        success : function (result) {
+            $.each(result, function (k, v) {
+                $("#listing_type").append(`<option value="${this.listingTypeName}">${this.listingTypeName}</option>`);
+            })
+        }, error : function (error, code) {
+            alert(error);
+        }
+    })
+}
+
 var addLocation = function () {
     var location_name = $("#location_name").val();
     var cell_id = $("#cell_id").val();
@@ -510,3 +538,4 @@ var addLocation = function () {
         }
     })
 }
+

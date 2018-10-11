@@ -30,8 +30,8 @@
                 </div>
                 <div class="col-md-7 text-right">
                     <ul class="breadcrumb_top text-right">
-                        <li><a href="submit_property.html" style="color: #0a4a55"><i style="color: #0a3d48" class="icon-icons215"></i>Offer Property</a></li>
-                        <li><a href="login.html" style="color: #0a4a55"><i style="color: #0a3d48" class="icon-icons179"></i>Sign up / Sign in</a></li>
+                        <li><a href="home" style="color: #0a4a55"><i style="color: #0a3d48"></i>Home</a></li>
+                        <li><a href="login" style="color: #0a4a55"><i style="color: #0a3d48"></i>Sign up / Sign in</a></li>
                     </ul>
                 </div>
             </div>
@@ -72,73 +72,47 @@
             <div class="col-sm-12">
                <div class="row offer_row">
                    <div class="col-sm-4">
-                       <div class="single-query form-group top10">
-                           <div class="intro">
-                               <select onchange="loadPropertyData()" id="property_type">
-                                   <option selected="" value="any">Type of property</option>
-                                   <option value="House">House</option>
-                                   <option value="Annex">Annex house</option>
-                                   <option value="Apartment">Apartment</option>
-                                   <option value="Accommodation">Accommodation</option>
-                                   <option value="Land">Land</option>
-                                   <option value="Commercial">Commercial</option>
-                                   <option value="Others">Others</option>
-                               </select>
-                           </div>
-                       </div>
+                       <select onchange="loadPropertyData()" id="property_type" class="col-sm-12">
+                           <option selected="" value="any">Type of property</option>
+                       </select>
                    </div>
 
                    <div class="col-sm-4">
-                       <div class="single-query form-group top10">
-                           <div class="intro">
-                               <select>
-                                   <option selected="" value="any">Listing type</option>
-                                   <option>For sale</option>
-                                   <option>For rent</option>
-                                   <option>Both for sale and for rent</option>
-                               </select>
-                           </div>
-                       </div>
+                       <select id="listing_type" class="col-sm-12">
+                           <option selected="" value="any">Listing type</option>
+                       </select>
                    </div>
                    <div class="col-sm-4">
                        <div class="col-sm-6">
-                           <div class="single-query form-group top10">
-                               <div class="intro">
-                                   <select>
-                                       <option selected="" value="any">Allowed lease duration</option>
-                                       <option>Any period</option>
-                                       <option>Only long term</option>
-                                       <option>Only short term</option>
-                                   </select>
-                               </div>
-                           </div>
+
+                           <select id="lease_duration" class="form-control col-sm-12">
+                               <option selected="" value="any">Allowed lease duration</option>
+                               <option>Any period</option>
+                               <option>Only long term</option>
+                               <option>Only short term</option>
+                           </select>
+
                        </div>
                        <div class="col-sm-6">
-                           <div class="single-query form-group top10">
-                               <div class="intro">
-                                   <select>
-                                       <option selected="" value="any">Allowed purchase mode</option>
-                                       <option>Any mode</option>
-                                       <option>By cash</option>
-                                       <option>By bank</option>
-                                       <option>Mortgage</option>
-                                       <option>Rent to buy</option>
-                                   </select>
-                               </div>
-                           </div>
+
+                           <select id="purchase_mode" class="form-control col-sm-12">
+                               <option selected="" value="any">Allowed purchase mode</option>
+                               <option>Any mode</option>
+                               <option>By cash</option>
+                               <option>By bank</option>
+                               <option>Mortgage</option>
+                               <option>Rent to buy</option>
+                           </select>
+
                        </div>
                    </div>
                </div>
             </div>
             <div class="col-sm-12">
                 <div class="row">
-                    <div class="col-sm-12">
-                        <div class="col-sm-12">
-                            <div class="single-query form-group top10">
-                                <div class="intro">
-                                    <input type="text" class="keyword-input" placeholder="Property name">
-                                </div>
-                            </div>
+                    <div class="single-query form-group top10">
+                        <div class="intro">
+                            <input id="property_name" type="text" class="keyword-input" placeholder="Property name">
                         </div>
                     </div>
                 </div>
@@ -265,8 +239,12 @@
 </html>
 <script>
     $(document).ready(function () {
-        //$("#search_location").select2();
-
+        loadPropertyTypes();
+        loadListingTypes();
+        $("#lease_duration").select2();
+        $("#purchase_mode").select2();
+        $("#listing_type").select2();
+        $("#property_type").select2();
     })
 
     window.onload = function() {

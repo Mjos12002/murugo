@@ -30,11 +30,8 @@
                 </div>
                 <div class="col-md-7 text-right">
                     <ul class="breadcrumb_top text-right">
-                        <li><a href="offer_property" style="color: #0a4a55"><i style="color: #0a3d48" class="icon-icons215"></i>Offer Property</a></li>
-                        <li><a href="district" style="color: #0a4a55"><i style="color: #0a3d48"></i>District</a></li>
-                        <li><a href="sector" style="color: #0a4a55"><i style="color: #0a3d48"></i>Sector</a></li>
-                        <li><a href="cell" style="color: #0a4a55"><i style="color: #0a3d48"></i>Cell</a></li>
-                        <li><a href="popular_location" style="color: #0a4a55"><i style="color: #0a3d48"></i>Popular location</a></li>
+                        <li><a href="district" style="color: #0a4a55"><i style="color: #0a3d48"></i>Home</a></li>
+                        <li><a href="login" style="color: #0a4a55"><i style="color: #0a3d48"></i>Sign in</a></li>
                     </ul>
                 </div>
             </div>
@@ -69,65 +66,36 @@
 <!--Slider-->
 
 <div class="row">
-    <div class="col-sm-6 agent-p-form">
-        <form class="callus clearfix border_radius">
-            <div class="col-sm-12">
-                <p>
-                    <span class="location_title">Sign in</span>
-                </p>
-                <p>
-                    <span id="server_response"></span>
-                </p>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="single-query form-group top10">
-                            <div class="intro">
-                                <input type="text" id="username" placeholder="Username name" class="" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="single-query form-group top10">
-                            <div class="intro">
-                                <input type="password" id="password" placeholder="Password" class="" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="single-query form-group top10">
-                            <div class="intro">
-                                <input type="password" id="confirm_password" placeholder="Confirm password" class="" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="single-query form-group top10">
-                            <div class="intro">
-                                <input type="text" id="email" placeholder="Email" class="" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="single-query form-group top10">
-                            <div class="intro">
-                                <input type="text" id="telephone" placeholder="Telephone" class="" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="single-query form-group top10">
-                            <div class="intro">
-                                <input type="button" class="btn btn-success" onclick="signIn()" value="Sign up" />
-                            </div>
-                        </div>
-                    </div>
-                    <p>
-                        <a href="sign_up" style="padding: 20px">Or sign up</a>
-                    </p>
-
+    <div class="col-sm-6">
+        <p>
+            <span class="location_title">Sign up</span>
+        </p>
+        <div class="agent-p-form" style="padding: 20px">
+            <form class="callus clearfix">
+                <div class="single-query col-sm-12 form-group">
+                    <input type="text" id="username" class="keyword-input" placeholder="Username" required>
                 </div>
-            </div>
-        </form>
+                <div class="single-query col-sm-12 form-group">
+                    <input type="text" id="email" class="keyword-input" placeholder="Email Address">
+                </div>
+                <div class="single-query col-sm-12 form-group">
+                    <input type="text" id="telephone" class="keyword-input" placeholder="Telephone">
+                </div>
+                <div class="single-query col-sm-12 form-group">
+                    <input type="password" id="password" class="keyword-input" placeholder="Password">
+                </div>
+                <div class="single-query col-sm-12 form-group">
+                    <input type="password" id="confirm_password" class="keyword-input" placeholder="Confirm  Password" readonly>
+                </div>
+                <div class="search-form-group white col-sm-12 form-group text-left">
+                    <div class="check-box-2"><i><input type="checkbox" name="check-box"></i></div>
+                    <span>I agree to terms and conditions</span>
+                </div>
+                <div class="col-sm-12">
+                    <input type="button" value="Create account" class="btn btn-success" onclick="signUp()">
+                </div>
+            </form>
+        </div>
 
     </div>
     <div class="col-sm-6" id="province_data">

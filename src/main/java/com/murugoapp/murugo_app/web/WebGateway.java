@@ -6,11 +6,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class WebGateway {
+    @RequestMapping("home")
+    public String home(){
+        return "index";
+    }
     @RequestMapping("/")
     public String index(){
         return "index";
     }
-    @RequestMapping("/offer_property")
+    @RequestMapping("offer_property")
     public String offerProperty(){
         return "offer_property";
     }
