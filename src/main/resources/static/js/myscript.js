@@ -490,6 +490,20 @@ var addPropertyType = () => {
 
 }
 
+var loadPropertyForSub = () => {
+    $.ajax({
+        url : "api/get_all_property_type",
+        method : "GET",
+        success : function (result) {
+            $.each(result, function (k, v) {
+                $("#parent_type").append(`<option value="${this.id}">${this.propertyTypeName}</option>`);
+            })
+        }, error : function (error, code) {
+            alert(error);
+        }
+    })
+}
+
 var loadPropertyTypes = () => {
     $.ajax({
         url : "api/get_all_property_type",
@@ -509,6 +523,7 @@ var loadListingTypes = () => {
         url : "api/get_all_listing_type",
         method : "GET",
         success : function (result) {
+            alert(JSON.stringify(result));
             $.each(result, function (k, v) {
                 $("#listing_type").append(`<option value="${this.listingTypeName}">${this.listingTypeName}</option>`);
             })
@@ -518,7 +533,62 @@ var loadListingTypes = () => {
     })
 }
 
+var loadPropertySubType = () => {
+    $.ajax({
+        url : 'api/get_all_property_sub_type',
+        method : 'GET',
+        success : function (data) {
+            $("#available_data").html("Wait while loading ...");
+            let counter = 0;
+            let table = "<p class='location_title'>List of property sub type</p>";
+            table += "<table class = 'table table-striped table-bordered'>";
+            table += "<tr>";
+            table += "<td>No</td><td>Property sub type</td>";
+            table += "</tr>";
+            $.each(data, function (k, v) {
+                counter ++;
+                table += "<tr>";
+                table += "<td>" + counter + ".</td>";
+                table += "<td>" + this.propertySubTypeName + "</td>";
+                table += "</tr>";
+            })
+            table += "</table>";
+            $("#available_data").html(table);
+
+        }, error : function (error, response) {
+            alert(error + " " + response);
+        }
+    });
+
+}
+
+var addPropertySubType = () => {
+
+    var property_type_id = $("#parent_type").val();
+    var property_sub_type_name = $("#property_sub_type_name").val();
+    var label = $("#sub_position").val();
+    $.ajax({
+        url : "api/add_property_sub_type",
+        method : "post",
+        data : {
+            'id' : 0,
+            'propertySubTypeName' : property_sub_type_name,
+            'propertyTypeID' : property_type_id,
+            'propertyClass' : label,
+        },
+        success : function (response) {
+            $("#server_response").html(response['responseDescription']);
+            loadPropertySubType();
+        },
+        error : function (err, ex) {
+            $("#server_response").html("Error, try again");
+        }
+    })
+
+}
+
 var addLocation = function () {
+
     var location_name = $("#location_name").val();
     var cell_id = $("#cell_id").val();
     $.ajax({

@@ -36,7 +36,8 @@ public class ApiCall {
     PropertyTypeModel propertyTypeModel;
     @Autowired
     ListingTypeModel listingTypeModel;
-
+    @Autowired
+    PropertySubTypeModel propertySubTypeModel;
 
     @RequestMapping(value = "/addProvince", method = RequestMethod.POST, produces = "application/json")
     public GenericServerResponse addProvince(@ModelAttribute ProvinceEntity provinceEntity){
@@ -76,6 +77,15 @@ public class ApiCall {
     @RequestMapping(value = "/add_district", produces = "application/json")
     public GenericServerResponse addDistrict(@ModelAttribute DistrictEntity districtEntity){
         return districtModel.addProvince(districtEntity);
+    }
+
+    @RequestMapping("/add_property_sub_type")
+    public GenericServerResponse addPropertySubType(@ModelAttribute PropertySubTypeEntity propertySubTypeEntity){
+        return propertySubTypeModel.addPropertySubType(propertySubTypeEntity);
+    }
+    @RequestMapping("/get_all_property_sub_type")
+    public List<PropertySubTypeEntity> getAllPropertySub(){
+        return propertySubTypeModel.getAllPropertySubType();
     }
 
     @RequestMapping(value = "add_property_type", produces = "application/json")

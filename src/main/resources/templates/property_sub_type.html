@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>Umuhuza | Province</title>
+    <title>Umuhuza | property sub type</title>
     <div class="" th:replace="includes/styles/index :: principal"></div>
 </head>
 <style>
@@ -63,10 +63,16 @@
                     <div class="collapse navbar-collapse" id="navbar-menu">
                         <ul class="nav navbar-nav" data-in="fadeIn" data-out="fadeOut">
                             <li class="dropdown">
-                                <a href="#." class="dropdown-toggle" data-toggle="dropdown">Property</a>
+                                <a href="#." class="dropdown-toggle" data-toggle="dropdown">Property data management</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="property_data">Property type</a></li>
                                     <li><a href="listing_type">Listing type</a></li>
+                                    <li class="dropdown">
+                                        <a href="#." class="dropdown-toggle" data-toggle="dropdown">Property type</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="property_type">Property type</a></li>
+                                            <li><a href="property_sub_type">Property sub type</a></li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>
@@ -82,7 +88,7 @@
         <form class="callus clearfix border_radius">
             <div class="col-sm-12">
                 <p>
-                    <span class="location_title">Property type</span>
+                    <span class="location_title">Property sub type</span>
                 </p>
                 <p>
                     <span id="server_response"></span>
@@ -90,15 +96,32 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="single-query form-group top10">
-                            <div class="intro">
-                                <input type="text" id="property_type_name" placeholder="Property type" class="" />
-                            </div>
+                            <select id="parent_type">
+                                <option selected="" value="any">Property type</option>
+                            </select>
                         </div>
                     </div>
                     <div class="col-sm-12">
                         <div class="single-query form-group top10">
                             <div class="intro">
-                                <input type="button" class="btn btn-success" onclick="addPropertyType()" value="Save" />
+                                <input type="text" id="property_sub_type_name" placeholder="Property sub type" class="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="single-query form-group top10">
+                            <select id="sub_position">
+                                <option selected="" value="any">Position</option>
+                                <option value="a">A</option>
+                                <option value="b">B</option>
+                                <option value="c">C</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="single-query form-group top10">
+                            <div class="intro">
+                                <input type="button" class="btn btn-success" onclick="addPropertySubType()" value="Save" />
                             </div>
                         </div>
                     </div>
@@ -222,7 +245,8 @@
 </html>
 <script>
     $(document).ready(function () {
-        loadPropertyTypeData();
+        loadPropertySubType();
+        loadPropertyForSub();
     })
 
     window.onload = function() {

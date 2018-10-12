@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>Umuhuza | Offer property</title>
+    <title>Umuhuza | Province</title>
     <div class="" th:replace="includes/styles/index :: principal"></div>
 </head>
 <style>
@@ -21,113 +21,100 @@
     </div>
 </div>
 <!--Header-->
-<header class="white_header">
-    <div class="topbar white border">
+<header class="layout_default">
+    <div class="topbar grey">
         <div class="container">
             <div class="row">
                 <div class="col-md-5">
-                    <p></p>
+
                 </div>
                 <div class="col-md-7 text-right">
                     <ul class="breadcrumb_top text-right">
-                        <li><a href="home" style="color: #0a4a55"><i style="color: #0a3d48"></i>Home</a></li>
-                        <li><a href="login" style="color: #0a4a55"><i style="color: #0a3d48"></i>Sign up / Sign in</a></li>
+                        <li><a href="/"><i class="icon-icons179"></i>Logout</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-default bootsnav">
+    <div class="header-upper">
         <div class="container">
-            <!-- Start Header Navigation -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <p style="font-size: 20px">Umuhuza</p>
-            </div>
-            <!-- End Header Navigation -->
-            <div class="collapse navbar-collapse" id="navbar-menu">
-                <ul class="nav navbar-nav navbar-right" data-in="fadeIn" data-out="fadeOut" style="margin-right: 40%; background-color: #014a8f">
-                    <li class="dropdown active">
-                        <a href="#." class="dropdown-toggle" data-toggle="dropdown"><span class="search-option-back" style="border-radius: 4px">Describe offered property</span></a>
-                    </li>
+            <div class="row">
+                <div class="col-md-3 col-sm-12">
+                    <div class="logo"><a href="#" style="font-size: 25px">Umuhuza</a></div>
+                </div>
+                <!--Info Box-->
+                <div class="col-md-9 col-sm-12 right">
 
-                </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-default navbar-sticky bootsnav">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Start Header Navigation -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <a class="navbar-brand sticky_logo" href="/">Umuhuza</a>
+                    </div> <!-- End Header Navigation -->
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+                        <ul class="nav navbar-nav" data-in="fadeIn" data-out="fadeOut">
+                            <li class="dropdown">
+                                <a href="#." class="dropdown-toggle" data-toggle="dropdown">Property data management</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="listing_type">Listing type</a></li>
+                                    <li class="dropdown">
+                                        <a href="#." class="dropdown-toggle" data-toggle="dropdown">Property type</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="property_type">Property type</a></li>
+                                            <li><a href="property_sub_type">Property sub type</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
 </header>
 <!--Header Ends-->
-<div class="blue_navi">
-    <div class="container">
-
-    </div>
-</div>
-<!--Slider-->
-
 <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-6">
         <form class="callus clearfix border_radius">
             <div class="col-sm-12">
-               <div class="row">
-                   <div class="col-sm-4">
-                       <div class="single-query form-group top10">
-                           <select onchange="loadPropertyData()" id="property_type" class="col-sm-12">
-                               <option selected="" value="any">Type of property</option>
-                           </select>
-                       </div>
-                   </div>
-                   <div class="col-sm-4">
-                       <div class="single-query form-group top10">
-                           <select id="listing_type">
-                               <option selected="" value="any">Listing type</option>
-                           </select>
-                       </div>
-                   </div>
-                   <div class="col-sm-4">
-                       <div class="col-sm-6">
-                           <div class="single-query form-group top10">
-                               <select id="lease_duration">
-                                   <option selected="" value="any">Allowed lease duration</option>
-                                   <option>Any period</option>
-                                   <option>Only long term</option>
-                                   <option>Only short term</option>
-                               </select>
-                           </div>
-                       </div>
-                       <div class="col-sm-6">
-                           <div class="single-query form-group top10">
-                               <select id="purchase_mode">
-                                   <option selected="" value="any">Allowed purchase mode</option>
-                                   <option>Any mode</option>
-                                   <option>By cash</option>
-                                   <option>By bank</option>
-                                   <option>Mortgage</option>
-                                   <option>Rent to buy</option>
-                               </select>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-               <div class="row">
-                   <div class="single-query form-group top10">
-                       <div class="intro" style="padding-left: 20px; padding-right: 20px">
-                           <input type="text" id="property_name" class="keyword-input" placeholder="Property name">
-                       </div>
-                   </div>
-                   <div id="property_type_data" class="col-sm-12">
+                <p>
+                    <span class="location_title">Property type</span>
+                </p>
+                <p>
+                    <span id="server_response"></span>
+                </p>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="single-query form-group top10">
+                            <div class="intro">
+                                <input type="text" id="property_type_name" placeholder="Property type" class="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="single-query form-group top10">
+                            <div class="intro">
+                                <input type="button" class="btn btn-success" onclick="addPropertyType()" value="Save" />
+                            </div>
+                        </div>
+                    </div>
 
-                   </div>
-               </div>
-            </div>
-
-            <div class="col-sm-12 description">
-                <span class="btn btn-primary"><a href="property_feature">Next</a> </span>
+                </div>
             </div>
 
         </form>
     </div>
+    <div id="available_data" class="col-sm-6"></div>
 </div>
 
 <!--Partner Ends-->
@@ -241,8 +228,7 @@
 </html>
 <script>
     $(document).ready(function () {
-        loadPropertyTypes();
-        loadListingTypes();
+        loadPropertyTypeData();
     })
 
     window.onload = function() {

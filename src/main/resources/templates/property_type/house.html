@@ -1,19 +1,19 @@
 <div class="col-sm-12">
     <p><span class="offer_title">Property type</span></p>
     <div class="col-sm-4">
-        <select id="property_category_a">
+        <select id="property_category_a" class="col-sm-12">
             <option selected="" value="any">Detached house</option>
 
         </select>
     </div>
 
     <div class="col-sm-4">
-        <select id="property_category_b">
+        <select id="property_category_b" class="col-sm-12">
             <option selected="" value="any">Single family house</option>
         </select>
     </div>
     <div class="col-sm-4">
-        <select id="property_type_c">
+        <select id="property_category_c" class="col-sm-12">
             <option selected="" value="any">Storey house</option>
         </select>
     </div>
@@ -196,3 +196,11 @@
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function () {
+        $("#property_category_a").select2();
+        $("#property_category_b").select2();
+        $("#property_category_c").select2();
+
+    })
+</script>
